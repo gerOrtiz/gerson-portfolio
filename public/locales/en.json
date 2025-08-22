@@ -1,0 +1,22 @@
+{
+	"header": {
+		"home": "Home",
+		"about": "About",
+		"services": "Services",
+		"projects": "Projects",
+		"contact": "Contact",
+		"main-menu": "Open main menu"
+	},
+	"footer": {
+		"text": "© 2025 Gerson Ortiz. All rights reserved."
+	},
+	"theme": {
+		"switchToLight": "Switch to light theme",
+		"switchToDark": "Switch to dark theme",
+		"light": "light",
+		"dark": "dark"
+	},
+	"language-button": {
+		"label": "Select language"
+	}
+}

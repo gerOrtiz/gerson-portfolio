@@ -1,0 +1,124 @@
+@keyframes slideToRight {
+  0% {
+    transform: translateX(0.1rem);
+  }
+
+  100% {
+    transform: translateX(2.1rem);
+  }
+}
+
+@keyframes slideToLeft {
+  0% {
+    transform: translateX(2.1rem);
+  }
+
+  100% {
+    transform: translateX(0.1rem);
+  }
+}
+
+@keyframes sparkBurst1 {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-40px, -30px) scale(1);
+  }
+}
+
+@keyframes sparkBurst2 {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(35px, -25px) scale(1);
+  }
+}
+
+@keyframes sparkBurst3 {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(15px, 30px) scale(1);
+  }
+}
+
+button.theme-toggle {
+  position: relative;
+  display: flex;
+  width: 3.8rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  align-items: center;
+}
+
+button.dark-theme {
+  background-color: #2563eb;
+  border: 2px solid #225ad4;
+  /*1d4ed8*/
+}
+
+button.light-theme {
+  background-color: #f8f0af;
+  border: 2px solid #fdf29b;
+  /*fcf9dc ca8a04*/
+}
+
+button.theme-toggle div.circle {
+  position: absolute;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid #dadada;
+  border-radius: 999px;
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4);
+  transform: translateX(0.1rem);
+}
+
+.spark {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #fbbf24;
+  border-radius: 50%;
+  border: 1px solid red;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+button.theme-toggle.dark-theme div.circle {
+  animation: slideToRight 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  /* animation: slideToRight 0.3s ease-out forwards; */
+}
+
+button.theme-toggle.light-theme div.circle {
+  animation: slideToLeft 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  /* animation: slideToLeft 0.3s ease-in forwards; */
+}
+
+button.theme-toggle.sparkle .spark-1 {
+  animation: sparkBurst1 0.8s ease-out forwards;
+}
+
+button.theme-toggle.sparkle .spark-2 {
+  animation: sparkBurst2 0.8s ease-out 0.1s forwards;
+}
+
+button.theme-toggle.sparkle .spark-3 {
+  animation: sparkBurst3 0.8s ease-out 0.2s forwards;
+}
