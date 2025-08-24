@@ -26,3 +26,16 @@ export default function Home() {
 		</main>
 	);
 }
+
+// export async function generateMetadata({
+//   params: { locale }
+// }: {
+//   params: { locale: string }
+// }) {
+//   const t = await getTranslations({ locale, namespace: 'metadata' });
+  
+//   return {
+//     title: t('title'),
+//     description: t('description'),
+//   };
+// }

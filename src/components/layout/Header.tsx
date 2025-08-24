@@ -27,8 +27,7 @@ export default function Header() {
 					</div>
 					{/* Desktop Navigation */}
 					<div className="hidden md:flex items-center space-x-8">
-						<Link href="#about">{t('about')}</Link>
-						<Link href="#services">{t('services')}</Link>
+						<Link href="#about">{t('experience')}</Link>
 						<Link href="#projects">{t('projects')}</Link>
 						<Link href="#contact">{t('contact')}</Link>
 						{/* Theme toggle placeholder */}

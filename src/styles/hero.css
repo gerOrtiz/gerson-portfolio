@@ -1,0 +1,36 @@
+:root {
+	--hero-card-bg: #AFD9F4;
+	--under-card-bg: #77EBA2;
+	--hero-shadow: rgba(0, 0, 0, 0.4);
+}
+
+.dark {
+	--hero-card-bg: #0A74B9;
+	--under-card-bg: #4ADE81;
+}
+
+.hero {
+	.upper-card {
+		background-color: var(--hero-card-bg);
+		box-shadow: 0px 6px 15px 0px var(--hero-shadow);
+	}
+
+	.under-card {
+		background-color: var(--under-card-bg);
+
+		span {
+			font-size: .9rem;
+		}
+	}
+}
+
+.resume-card {
+	transition: transform 0.3s ease-in-out;
+
+}
+
+.resume-card.open {
+	transform: translateX(0%);
+	opacity: 1;
+	z-index: 0;
+}

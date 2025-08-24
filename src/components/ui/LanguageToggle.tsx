@@ -4,6 +4,7 @@ import { useRouter, usePathname } from '@/i18n/navigation';
 import { LanguagesIcon } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useCallback } from 'react';
+import style from "@/styles/language-button.module.css";
 
 export default function LanguageToggle() {
 	const router = useRouter();
@@ -37,7 +38,7 @@ export default function LanguageToggle() {
 			// aria-expanded={openMenu}
 			// aria-haspopup="listbox"
 			aria-label={t('label')}
-			className="px-3 py-3 text-sm rounded-xl shadow shadow-gray-300 bg-gray-100 hover:bg-gray-300 hover:shadow-gray-400"
+			className={`${style.toggle} px-3 py-3 text-sm rounded-xl`}
 		>
 			<div className="flex w-full items-center gap-2">
 				<LanguagesIcon className="w-4 h-4" />

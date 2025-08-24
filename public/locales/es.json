@@ -1,8 +1,7 @@
 {
 	"header": {
 		"home": "Inicio",
-		"about": "Acerca",
-		"services": "Servicios",
+		"experience": "Experiencia",
 		"projects": "Proyectos",
 		"contact": "Contacto",
 		"main-menu": "Abrir menú principal"
@@ -18,5 +17,11 @@
 	},
 	"language-button": {
 		"label": "Elige el idioma"
+	},
+	"hero": {
+		"Currently crafting digital experiences": "Actualmente creando experiencias digitales",
+		"Building the future, one component at a time": "Construyendo el futuro, un componente a la vez",
+		"Transforming ideas into interactive realities": "Transformando ideas en realidades interactivas",
+		"Available for your next big project": "Disponible para tu próximo gran proyecto"
 	}
 }

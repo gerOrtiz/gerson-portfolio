@@ -7,6 +7,7 @@ import { routing } from '@/i18n/routing';
 import "../globals.css";
 import "@/styles/theme.css";
 import "@/styles/toggle-animations.css";
+//import "@/styles/buttons.css";
 import { ThemeProvider } from "next-themes";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";

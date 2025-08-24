@@ -1,8 +1,7 @@
 {
 	"header": {
 		"home": "Home",
-		"about": "About",
-		"services": "Services",
+		"experience": "Experience",
 		"projects": "Projects",
 		"contact": "Contact",
 		"main-menu": "Open main menu"
@@ -18,5 +17,11 @@
 	},
 	"language-button": {
 		"label": "Select language"
+	},
+	"hero": {
+		"Currently crafting digital experiences": "Currently crafting digital experiences",
+		"Building the future, one component at a time": "Building the future, one component at a time",
+		"Transforming ideas into interactive realities": "Transforming ideas into interactive realities",
+		"Available for your next big project": "Available for your next big project"
 	}
 }
