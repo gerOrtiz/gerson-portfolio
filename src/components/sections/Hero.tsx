@@ -1,7 +1,7 @@
 'use client';
 import "@/styles/hero.css";
 import { useTranslations } from "next-intl";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import avatar from "@/assets/avatar.jpg";
 import Image from "next/image";
 import { X } from "lucide-react";
@@ -17,25 +17,34 @@ export default function Hero() {
 	const [currentStatus, setCurrentStatus] = useState<string>(statusMessages[0]);
 	const [showResume, setShowResume] = useState(false);
 	const t = useTranslations('hero');
+	const timer = useRef<NodeJS.Timeout | null>(null);
 
 	const handleCardHover = useCallback(() => {
-		setCurrentStatus('');
-		const randomIndex = Math.floor(Math.random() * statusMessages.length);
-		setCurrentStatus(statusMessages[randomIndex]);
+		if (timer.current) clearTimeout(timer.current);
+		timer.current = setTimeout(() => {
+			const randomIndex = Math.floor(Math.random() * statusMessages.length);
+			setCurrentStatus(statusMessages[randomIndex]);
+		}, 200);
+	}, []);
+
+	useEffect(() => {
+		return () => { if (timer.current) clearTimeout(timer.current); }
 	}, []);
 
 	return (
-		<section id="hero" className="min-h-20 flex flex-1 flex-wrap items-center justify-center gap-12 px-4 py-20">
+		<section id="hero" className="min-h-20 flex flex-1 flex-wrap items-center justify-center gap-12 ">
 			<div className="hero w-full max-w-md">
+				<h2 className="sr-only">{t('header')}</h2>
+				<h3 className="sr-only">{t('subtitle')}</h3>
 				{/* Container */}
-				<div className="relative group" onMouseEnter={handleCardHover}>
+				<div className="relative group" onMouseLeave={handleCardHover}>
 					{/* upper card */}
 					<div className="upper-card  rounded-3xl px-6 py-4 min-h-20">
 						<div className="flex flex-col justify-between gap-5">
 							{/* status */}
 							<div className="flex items-center gap-2">
 								<div className="w-2 h-2 bg-green-500 rounded-full"></div>
-								<span className="text-sm">{'Available'}</span>
+								<span className="text-sm">{t('status')}</span>
 							</div>
 							{/* Info */}
 							<div className="flex gap-3 items-center h-auto">
@@ -44,13 +53,13 @@ export default function Hero() {
 								</div>
 								<div className="flex flex-col w-full">
 									<h4>Gerson Ortiz</h4>
-									<h5>Frontend Developer</h5>
+									<h5>{t('subtitle')}</h5>
 								</div>
 							</div>
 							{/* CTA */}
 							<div className="flex gap-2 items-center justify-center">
-								<button className="btn-base btn-primary">Let's Talk</button>
-								<button className="btn-base btn-secondary" onClick={() => setShowResume(!showResume)}>Resume</button>
+								<button className="btn-base btn-primary">{t('button1')}</button>
+								<button className="btn-base btn-secondary" onClick={() => setShowResume(!showResume)}>{t('button2')}</button>
 							</div>
 						</div>
 					</div>
@@ -73,13 +82,13 @@ export default function Hero() {
 							</button>
 
 						</div>
-						<h5 className="text-blue-600 font-bold">My resume</h5>
+						<h5 className="text-blue-600 font-bold">{t('resumeTitle')}</h5>
 						<dl>
-							<dt>English resume</dt>
+							<dt>{t('resume1')}</dt>
 							<dd className="ml-12 mb-4">
 								<a href="">Gerson Resume</a>
 							</dd>
-							<dt>Spanish resume</dt>
+							<dt>{t('resume2')}</dt>
 							<dd className="ml-12"><a href="">Gerson CV</a></dd>
 						</dl>
 					</div>

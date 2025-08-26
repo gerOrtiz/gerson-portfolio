@@ -1,22 +1,16 @@
 import Hero from "@/components/sections/Hero";
+import Projects from "@/components/sections/Projects";
 
 export default function Home() {
 	return (
-		<main >
+		<main className="min-h-screen flex flex-col gap-10 px-6 lg:px-4 py-10 lg:py-20">
 			<Hero />
-			{/* About Section */}
+
+			<Projects />
+
+			{/* Experience Section */}
 			<section id="about" className="min-h-screen">
-				<h2>About Section</h2>
-			</section>
-
-			{/* Services Section */}
-			<section id="services" className="min-h-screen">
-				<h2>Services Section</h2>
-			</section>
-
-			{/* Projects Section - Will be card-based, expandable */}
-			<section id="projects" className="min-h-screen">
-				<h1>Projects Section</h1>
+				<h2>Experience Section</h2>
 			</section>
 
 			{/* Contact Section - Will have React Hook Form */}

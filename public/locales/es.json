@@ -19,9 +19,32 @@
 		"label": "Elige el idioma"
 	},
 	"hero": {
+		"header": "Portafolio - Gerson Ortiz",
 		"Currently crafting digital experiences": "Actualmente creando experiencias digitales",
 		"Building the future, one component at a time": "Construyendo el futuro, un componente a la vez",
 		"Transforming ideas into interactive realities": "Transformando ideas en realidades interactivas",
-		"Available for your next big project": "Disponible para tu próximo gran proyecto"
+		"Available for your next big project": "Disponible para tu próximo gran proyecto",
+		"status": "Disponible",
+		"subtitle": "Desarrolador Frontend",
+		"button1": "Hablemos",
+		"button2": "Mi CV",
+		"resumeTitle": "Mi CV",
+		"resume1": "CV en Inglés",
+		"resume2": "CV en Español"
+	},
+	"projects": {
+		"title": "Proyectos Recientes",
+		"action": "Ir al sitio",
+		"expensesApp": {
+			"title": "Expenses App",
+			"subtitle": "Plataforma de finanzas personales",
+			"description": "Una aplicación web completa de seguimiento de gastos creada con Next.js 14 y TypeScript, con cálculos de saldo en tiempo real y categorización inteligente de gastos. Los usuarios pueden administrar tanto transacciones con efectivo y tarjeta, crear gastos proyectados para una mejor planeación financiera, y obtener información instantánea a través de un panel intuitivo.",
+			"techStack": {
+				"nextjs": "Next.js",
+				"typescript": "TypeScript",
+				"mongodb": "MongoDB",
+				"tailwind": "Tailwind CSS"
+			}
+		}
 	}
 }

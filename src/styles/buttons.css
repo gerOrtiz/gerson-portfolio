@@ -24,9 +24,9 @@
 
 .dark {
   /* Primary Colors - Adjusted for dark */
-  --primary: #3b82f6;
+  --primary: #245199;
   --primary-foreground: #ffffff;
-  --primary-hover: #2563eb;
+  --primary-hover: #112f70;
   /* Secondary Colors */
   --secondary: #334155;
   --secondary-foreground: #f8fafc;
