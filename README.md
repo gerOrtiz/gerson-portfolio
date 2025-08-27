@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Portfolio - Gerson Ortiz
+A modern, accessible portfolio website showcasing frontend development expertise and professional experience.
+🔗 Live Demo
+View Portfolio <!-- Update with your deployed URL -->
+🚀 Features
 
-## Getting Started
+Bilingual Support: Full internationalization (English/Spanish) using next-intl
+Dark/Light Theme: Custom theme system with smooth transitions
+Accessibility Compliant: WCAG guidelines compliance with comprehensive testing
+Responsive Design: Mobile-first approach with optimized layouts
+Smooth Animations: Framer Motion scroll animations and micro-interactions
+Performance Optimized: Next.js 14 with TypeScript for type safety
 
-First, run the development server:
+🛠 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Frontend: Next.js 14, TypeScript, React
+Styling: Tailwind CSS with custom CSS properties
+Animation: Framer Motion
+Internationalization: next-intl
+Theme Management: next-themes
+Testing: Jest, React Testing Library
+Development: ESLint, Prettier
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📱 Sections
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Hero: Professional introduction with downloadable resume (EN/ES)
+Projects: Featured work with technical details and live demos
+Experience: Career journey highlighting key achievements
+Contact: Professional contact information and links
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🏃‍♂️ Quick Start
 
-## Learn More
+Clone the repository
+bashgit clone https://github.com/yourusername/portfolio.git
+cd portfolio
 
-To learn more about Next.js, take a look at the following resources:
+Install dependencies
+bashnpm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run development server
+bashnpm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open in browser
+Navigate to http://localhost:3000
 
-## Deploy on Vercel
+📁 Project Structure
+├── src/
+│   ├── app/           # Next.js 14 app directory
+│   ├── components/    # Reusable React components
+│   ├── assets/        # Images and static files
+│   ├── styles/        # CSS modules and global styles
+|   |──__tests__/      # Test files
+├── public/            # Static assets
+    ├── locales/      # Internationalization files
+└──
+🎨 Design Philosophy
+This portfolio emphasizes:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Accessibility: WAVE-compliant with proper semantic HTML
+Performance: Optimized images and lazy loading
+User Experience: Intuitive navigation and smooth interactions
+Professional Presentation: Clean design showcasing technical skills
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🧪 Testing
+bash# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Generate coverage report
+npm run test:coverage
+🚀 Deployment
+Built for deployment on modern platforms like Vercel, Netlify, or similar services that support Next.js.
+bash# Build for production
+npm run build
+
+# Start production server
+npm start
+🔧 Development Notes
+
+Custom CSS properties enable seamless theme switching
+Component architecture follows React best practices
+TypeScript ensures type safety throughout the application
+Responsive design tested across multiple device sizes
+
+📞 Contact
+For inquiries about this project or collaboration opportunities:
+
+Email: contact-gersonortiz@gmail.com
+LinkedIn: https://www.linkedin.com/in/gersonortizv/
+GitHub: https://github.com/gerOrtiz
+
+
+Built with passion for clean code and exceptional user experiences.
