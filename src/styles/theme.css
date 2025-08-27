@@ -3,34 +3,25 @@
 	/* Light Theme Colors */
 	--gradient-start: #ffffff;
 	--gradient-end: #f1f5f9;
-	--muted: #f8fafc;
-	--muted-foreground: #64748b;
+	--foreground: #04004e;
+	--muted-foreground: #1f1d4e;
 	--header-bg: #ffffff;
 	--header-shadow: rgba(0, 0, 0, 0.1);
 	--footer-bg: #1e293b;
 	--footer-text: #ffffff;
+	--theme-toggle-bg: rgb(243 244 246);
+	--theme-toggle-hover: rgb(209 213 219);
 	--border: #e2e8f0;
 	--input: #ffffff;
-	--card: #ffffff;
-	--card-foreground: #0f172a;
 
-	/* Primary Colors - Blue Scale */
-	--primary: #2563eb;
-	--primary-foreground: #ffffff;
-	--primary-hover: #1d4ed8;
-
-	/* Secondary Colors - Neutral Scale */
-	--secondary: #f1f5f9;
-	--secondary-foreground: #0f172a;
-	--secondary-hover: #e2e8f0;
 
 	/* Accent Colors */
-	--accent: #6366f1;
+	--accent: #1f1d4e;
 	--accent-foreground: #ffffff;
-	--accent-hover: #4f46e5;
+	--accent-hover: #141333;
 
 	/* Semantic Colors */
-	--success: #16a34a;
+	--success: #0b5827;
 	--success-foreground: #ffffff;
 	--warning: #eab308;
 	--warning-foreground: #ffffff;
@@ -38,13 +29,13 @@
 	--error-foreground: #ffffff;
 
 	/* Link Colors */
-	--link: #2563eb;
-	--link-hover: #1d4ed8;
-	--link-visited: #7c3aed;
+	--link: #19439e;
+	--link-hover: #112f80;
+	--link-visited: #462088;
 
 	/* Shadow Colors */
-	--shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-	--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+	--shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+	--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
 	/* Spacing & Sizing */
 	--header-height: 4rem;
@@ -63,31 +54,22 @@
 	--gradient-end: #312e81;
 	--foreground: #f8fafc;
 	--muted: #1e293b;
-	--muted-foreground: #94a3b8;
+	--muted-foreground: #adbed6;
 	--header-bg: #1e293b;
 	--header-shadow: rgba(255, 255, 255, 0.1);
+	--theme-toggle-bg: #2563eb;
+	--theme-toggle-hover: #1f52c2;
 	--border: #334155;
 	--input: #1e293b;
-	--card: #1e293b;
-	--card-foreground: #f8fafc;
 
-	/* Primary Colors - Adjusted for dark */
-	--primary: #3b82f6;
-	--primary-foreground: #ffffff;
-	--primary-hover: #2563eb;
-
-	/* Secondary Colors */
-	--secondary: #334155;
-	--secondary-foreground: #f8fafc;
-	--secondary-hover: #475569;
 
 	/* Accent Colors */
-	--accent: #8b5cf6;
+	--accent: #fdfdfd;
 	--accent-foreground: #ffffff;
-	--accent-hover: #7c3aed;
+	--accent-hover: #e5d7ff;
 
 	/* Semantic Colors - Dark theme variants */
-	--success: #22c55e;
+	--success: #daffe1;
 	--success-foreground: #ffffff;
 	--warning: #f59e0b;
 	--warning-foreground: #ffffff;
@@ -96,16 +78,16 @@
 
 	/* Link Colors */
 	--link: #d3d8f5;
-	--link-hover: #3b82f6;
+	--link-hover: #98befc;
 	--link-visited: #a78bfa;
 
 	/* Shadow Colors - Adjusted for dark */
-	--shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
-	--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+	--shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.1), 0 1px 2px -1px rgba(255, 255, 255, 0.1);
+	--shadow-lg: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -4px rgba(255, 255, 255, 0.1);
 }
 
 html {
 	background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
-	color: var(--foreground);
+	color: var(--muted-foreground);
 	transition: background-color 0.3s ease, color 0.3s ease;
 }

@@ -9,7 +9,7 @@ import "@/styles/theme.css";
 import "@/styles/toggle-animations.css";
 import { ThemeProvider } from "next-themes";
 import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+// import Footer from "@/components/layout/Footer";
 
 
 const geistSans = localFont({
@@ -35,7 +35,7 @@ export default async function RootLayout({
 	children: React.ReactNode;
 	params: { locale: string };
 }>) {
-	if (!routing.locales.includes(params.locale as any)) {
+	if (!routing.locales.includes(params.locale as any)) { //eslint-disable-line
 		notFound();
 	}
 	const messages = await getMessages();
@@ -48,7 +48,7 @@ export default async function RootLayout({
 						disableTransitionOnChange>
 						<Header />
 						{children}
-						<Footer />
+						{/* <Footer /> */}
 					</ThemeProvider>
 				</NextIntlClientProvider>
 			</body>
