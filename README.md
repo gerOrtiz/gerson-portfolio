@@ -1,7 +1,7 @@
 Portfolio - Gerson Ortiz
 A modern, accessible portfolio website showcasing frontend development expertise and professional experience.
 🔗 Live Demo
-View Portfolio <!-- Update with your deployed URL -->
+  gerson-portfolio-page.vercel.app
 🚀 Features
 
 Bilingual Support: Full internationalization (English/Spanish) using next-intl
