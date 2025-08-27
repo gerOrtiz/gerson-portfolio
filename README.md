@@ -1,4 +1,5 @@
-Portfolio - Gerson Ortiz
+# Portfolio - Gerson Ortiz
+
 A modern, accessible portfolio website showcasing frontend development expertise and professional experience.
 🔗 Live Demo
   gerson-portfolio-page.vercel.app
@@ -28,11 +29,11 @@ Projects: Featured work with technical details and live demos
 Experience: Career journey highlighting key achievements
 Contact: Professional contact information and links
 
-🏃‍♂️ Quick Start
+# 🏃‍♂️Quick Start
 
 Clone the repository
-bashgit clone https://github.com/yourusername/portfolio.git
-cd portfolio
+bashgit clone https://github.com/gerOrtiz/gerson-portfolio.git
+cd gerson-portfolio
 
 Install dependencies
 bashnpm install
