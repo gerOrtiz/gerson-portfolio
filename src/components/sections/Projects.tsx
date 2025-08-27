@@ -1,5 +1,5 @@
 'use client';
-import expensesApp from "@/assets/app-1.jpg";
+import expensesApp from "@/assets/app.jpg";
 import Image from "next/image";
 import nextIcon from "@/assets/next-icon.svg";
 import typescriptIcon from "@/assets/typescript.png";
