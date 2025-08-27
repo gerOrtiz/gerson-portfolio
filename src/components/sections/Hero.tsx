@@ -4,7 +4,8 @@ import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useRef, useState } from "react";
 import avatar from "@/assets/avatar.jpg";
 import Image from "next/image";
-import { X } from "lucide-react";
+import { FileText, X } from "lucide-react";
+import Link from "next/link";
 
 const statusMessages = [
 	"Currently crafting digital experiences",
@@ -58,7 +59,7 @@ export default function Hero() {
 							</div>
 							{/* CTA */}
 							<div className="flex gap-2 items-center justify-center">
-								<button className="btn-base btn-primary">{t('button1')}</button>
+								<Link href="#contact" className="btn-base btn-primary btn-link">{t('button1')}</Link>
 								<button className="btn-base btn-secondary" onClick={() => setShowResume(!showResume)}>{t('button2')}</button>
 							</div>
 						</div>
@@ -82,14 +83,20 @@ export default function Hero() {
 							</button>
 
 						</div>
-						<h5 className="text-blue-600 font-bold">{t('resumeTitle')}</h5>
+						<h5 className="font-bold">{t('resumeTitle')}</h5>
 						<dl>
 							<dt>{t('resume1')}</dt>
-							<dd className="ml-12 mb-4">
-								<a href="">Gerson Resume</a>
+							<dd className="ml-12 mb-4 flex gap-2 items-center">
+								<a href="/Gerson_Ortiz.pdf" download>
+									Gerson Resume.pdf
+								</a>
+								<FileText width={12} height={12} />
 							</dd>
 							<dt>{t('resume2')}</dt>
-							<dd className="ml-12"><a href="">Gerson CV</a></dd>
+							<dd className="ml-12 flex gap-2 items-center">
+								<a href="/Gerson_Ortiz_CV.pdf" download>Gerson CV</a>
+								<FileText width={12} height={12} />
+							</dd>
 						</dl>
 					</div>
 				</div>

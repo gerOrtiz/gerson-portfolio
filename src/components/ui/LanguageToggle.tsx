@@ -16,7 +16,7 @@ export default function LanguageToggle() {
 		const newLocale = locale === 'es' ? 'en' : 'es';
 		router.replace(pathname, { locale: newLocale });
 		//setOpenMenu(false);
-	}, []);
+	}, [locale, pathname, router]);
 
 	// const handleOpenMenu = useCallback(() => {
 	// 	setOpenMenu(!openMenu);
@@ -41,8 +41,8 @@ export default function LanguageToggle() {
 			className={`${style.toggle} px-3 py-3 text-sm rounded-xl`}
 		>
 			<div className="flex w-full items-center gap-2">
-				<LanguagesIcon className="w-4 h-4" />
-				<span>{locale === 'en' ? 'EN' : 'ES'}</span>
+				<LanguagesIcon className={`w-4 h-4 ${style.text}`} />
+				<span className={style.text}>{locale === 'en' ? 'EN' : 'ES'}</span>
 			</div>
 
 		</button>

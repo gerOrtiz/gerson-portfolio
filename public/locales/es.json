@@ -46,5 +46,27 @@
 				"tailwind": "Tailwind CSS"
 			}
 		}
+	},
+	"experience": {
+		"title": "Experiencia",
+		"banner1": {
+			"title": "De AngularJS a React Moderno",
+			"description": "Mi trayectoria frontend comenzó con AngularJS 1.6, construyendo aplicaciones dinámicas cuando el framework estaba en su apogeo. Cuando la industria se desplazó hacia React y JavaScript moderno, reconocí la necesidad de evolucionar. Aprendí React de manera proactiva a través de tutoriales y obtuve certificación para validar mis habilidades cuando mi empresa necesitó experiencia en Next.js. Esta transición no se trataba solo de aprender nueva sintaxis, sino de adoptar prácticas de desarrollo modernas, TypeScript para mayor confiabilidad del código, y entender cómo construir aplicaciones escalables con herramientas contemporáneas. El cambio de la estructura poco flexible de AngularJS a la flexibilidad de React requirió repensar mi enfoque hacia la arquitectura de componentes y el manejo de estados."
+		},
+		"banner2": {
+			"title": "Construyendo Características Complejas de Negocio",
+			"description": "Más allá de componentes simples de UI, he desarrollado sistemas sofisticados que resuelven desafíos reales de negocio. En mi empresa anterior, construí un sistema integral de descuentos y cupones que manejaba múltiples reglas de validación, lógica de expiración y seguimiento de uso. Creé módulos de enlaces de pago que se integraban con varios proveedores mientras mantenían estándares de seguridad. Uno de mis proyectos más desafiantes fue construir un sistema de variaciones de productos donde los productos hijo podían tener precios, imágenes y atributos independientes mientras permanecían conectados a su producto padre. Estos no eran solo ejercicios de programación, requirieron entender lógica de negocio, relaciones de datos y flujos de usuario para crear sistemas que realmente funcionaran en entornos de producción."
+		},
+		"banner3": {
+			"title": "Aseguramiento de Calidad Autodidacta",
+			"description": "Trabajar sin herramientas formales de testing me enseñó a ser mi propio ingeniero de aseguramiento de calidad. Desarrollé hábitos rigurosos de probar manualmente casos extremos, validar flujos de usuario y detectar errores potenciales antes de que llegaran a producción. Esto no se trataba solo de encontrar errores obvios, significaba pensar como usuarios que podrían interactuar con características de maneras inesperadas, considerar casos extremos de datos y anticipar problemas de integración entre diferentes componentes del sistema. Ahora estoy integrando frameworks de testing modernos como Jest y React Testing Library en mi flujo de trabajo, combinando esa atención al detalle ganada con esfuerzo con prácticas de testing automatizado. Esta evolución del aseguramiento de calidad manual a enfoques de testing estructurados me da un entendimiento integral de cómo construir aplicaciones confiables. Escribo código pensando en la mantenibilidad futura, hago pruebas de lógica compleja minuciosamente y estructuro aplicaciones para minimizar errores mientras aseguro que puedan ser probadas y validadas apropiadamente."
+		}
+	},
+	"contact": {
+		"title": "Ponte en contacto",
+		"subtitle": "Trabajemos juntos",
+		"anchor1": "Conectar",
+		"anchor2": "Ver código",
+		"anchor3": "Correo"
 	}
 }

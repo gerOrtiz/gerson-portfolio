@@ -13,6 +13,10 @@
 	.upper-card {
 		background-color: var(--hero-card-bg);
 		box-shadow: 0px 6px 15px 0px var(--hero-shadow);
+
+		span {
+			color: var(--success)
+		}
 	}
 
 	.under-card {

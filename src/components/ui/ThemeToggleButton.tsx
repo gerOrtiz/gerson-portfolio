@@ -24,7 +24,7 @@ export default function ThemeToggleButton() {
 		timer.current = setTimeout(() => {
 			setSparkClass('');
 		}, 1000);
-	}, [isDark]);
+	}, [isDark, setTheme]);
 
 	if (!mounted) return <div className="w-14 h-7" />;
 

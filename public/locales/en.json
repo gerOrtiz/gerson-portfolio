@@ -46,5 +46,27 @@
 				"tailwind": "Tailwind CSS"
 			}
 		}
+	},
+	"experience": {
+		"title": "Experience",
+		"banner1": {
+			"title": "From AngularJS to Modern React",
+			"description": "My frontend journey began with AngularJS 1.6, building dynamic applications when the framework was at its peak. As the industry shifted toward React and modern JavaScript, I recognized the need to evolve. I proactively learned React through tutorials and earned certification to validate my skills when my company needed Next.js expertise. This transition wasn't just about learning new syntax, it meant embracing modern development practices, TypeScript for better code reliability, and understanding how to build scalable applications with contemporary tools. The shift from AngularJS's opinionated structure to React's flexibility required rethinking how I approached component architecture and state management."
+		},
+		"banner2": {
+			"title": "Building Complex Business Features",
+			"description": "Beyond simple UI components, I've developed sophisticated systems that solve real business challenges. At my previous company, I built a comprehensive discount and coupon system that handled multiple validation rules, expiration logic, and usage tracking. I created payment link modules that integrated with various providers while maintaining security standards. One of my most challenging projects was architecting a product variation system where child products could have independent pricing, images, and attributes while remaining connected to their parent product. These weren't just coding exercises, they required understanding business logic, data relationships, and user workflows to create systems that actually worked in production environments."
+		},
+		"banner3": {
+			"title": "Self-Taught Quality Assurance",
+			"description": "Working without formal testing tools taught me to be my own quality assurance engineer. I developed rigorous habits of manually testing edge cases, validating user flows, and catching potential bugs before they reached production. This wasn't just about finding obvious errors, it meant thinking like users who might interact with features in unexpected ways, considering data edge cases, and anticipating integration issues between different system components. Now I'm integrating modern testing frameworks like Jest and React Testing Library into my workflow, combining that hard-earned attention to detail with automated testing practices. This evolution from manual quality assurance to structured testing approaches gives me a comprehensive understanding of how to build reliable applications. I write code with future maintainability in mind, document complex logic thoroughly, and structure applications to minimize errors while ensuring they can be properly tested and validated."
+		}
+	},
+	"contact": {
+		"title": "Get in touch",
+		"subtitle": "Let's work together",
+		"anchor1": "Connect",
+		"anchor2": "View code",
+		"anchor3": "Email me"
 	}
 }

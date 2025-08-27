@@ -1,3 +1,5 @@
+import Contact from "@/components/sections/Contact";
+import Experience from "@/components/sections/Experience";
 import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
 
@@ -8,15 +10,9 @@ export default function Home() {
 
 			<Projects />
 
-			{/* Experience Section */}
-			<section id="about" className="min-h-screen">
-				<h2>Experience Section</h2>
-			</section>
-
-			{/* Contact Section - Will have React Hook Form */}
-			<section id="contact" className="min-h-screen">
-				<h1>Contact Section</h1>
-			</section>
+			<Experience />
+			
+			<Contact />
 		</main>
 	);
 }

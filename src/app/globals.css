@@ -54,18 +54,18 @@ h4 {
 p {
 	line-height: 1.7;
 	font-size: clamp(.9rem, 1.5vw, 1rem);
-	/* color: var(--muted-foreground); */
 }
 
 span {
 	font-size: clamp(.8rem, 1.1vw, .9rem);
 }
 
-a:not(.image-link) {
+a:not(.btn-link) {
 	color: var(--link);
 	text-decoration: none;
 	transition: var(--transition);
 	position: relative;
+	font-size: clamp(.9rem, 1.5vw, 1rem);
 
 	&::after {
 		content: '';
@@ -81,7 +81,7 @@ a:not(.image-link) {
 
 	&:hover {
 		color: var(--link-hover);
-		font-size: 1.05rem;
+		font-size: clamp(.95rem, 1.5vw, 1.05rem);
 
 		&::after {
 			width: 100%;

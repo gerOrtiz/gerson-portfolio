@@ -1,0 +1,15 @@
+h3.title {
+	text-shadow: 1px 1px rgb(105, 105, 105);
+}
+
+img.fit {
+	width: 100%;
+	aspect-ratio: 1/1;
+	object-fit: contain;
+}
+
+@media (width<768px) {
+	img.fit {
+		width: 80%;
+	}
+}

@@ -1,10 +1,18 @@
-.toggle {
+button.toggle {
 	background-color: var(--theme-toggle-bg);
 	box-shadow: var(--shadow);
 
 	&:hover {
 		background-color: var(--theme-toggle-hover);
+
+		.text {
+			color: var(--accent-hover);
+		}
 	}
+}
+
+.text {
+	color: var(--accent);
 }
 
 .menu {
