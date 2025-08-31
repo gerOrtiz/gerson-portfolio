@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import avatar from "@/assets/avatar.jpg";
 import Image from "next/image";
 import { FileText, X } from "lucide-react";
+import { motion } from 'framer-motion';
 import Link from "next/link";
 
 const statusMessages = [
@@ -74,25 +75,24 @@ export default function Hero() {
 				</div>
 
 			</div>
-			{showResume && <div className={`${showResume ? 'open' : ''} resume-card flex flex-col w-full max-w-xs`}>
-				<div className="card">
+			<div className={`${showResume ? 'flex' : 'hidden'} resume-card flex-col w-full max-w-xs`}			>
+				<div className="card"	>
 					<div className="py-1 px-4 flex flex-col gap-4 relative">
 						<div className="absolute right-0">
 							<button aria-label="Close resume card" className="bg-transparent hover:bg-gray-300" onClick={() => setShowResume(false)}>
 								<X className="w-3 h-3 " />
 							</button>
-
 						</div>
-						<h5 className="font-bold">{t('resumeTitle')}</h5>
+						<h5 className="font-bold text-center">{t('resumeTitle')}</h5>
 						<dl>
-							<dt>{t('resume1')}</dt>
+							<dt className="list-title">{t('resume1')}</dt>
 							<dd className="ml-12 mb-4 flex gap-2 items-center">
 								<a href="/Gerson_Ortiz.pdf" download>
 									Gerson Resume.pdf
 								</a>
 								<FileText width={12} height={12} />
 							</dd>
-							<dt>{t('resume2')}</dt>
+							<dt className="list-title">{t('resume2')}</dt>
 							<dd className="ml-12 flex gap-2 items-center">
 								<a href="/Gerson_Ortiz_CV.pdf" download>Gerson CV</a>
 								<FileText width={12} height={12} />
@@ -100,7 +100,8 @@ export default function Hero() {
 						</dl>
 					</div>
 				</div>
-			</div>}
+			</div>
+
 
 		</section>
 

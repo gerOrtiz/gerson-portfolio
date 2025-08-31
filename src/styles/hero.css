@@ -2,11 +2,46 @@
 	--hero-card-bg: #AFD9F4;
 	--under-card-bg: #77EBA2;
 	--hero-shadow: rgba(0, 0, 0, 0.4);
+	--resume-dark-bg: #57b5f1;
 }
 
 .dark {
 	--hero-card-bg: #0A74B9;
 	--under-card-bg: #4ADE81;
+	--resume-dark-bg: #206898;
+	--dt-color: #e3e8f7;
+}
+
+@keyframes toTheRight {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes fromTheTop {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
 }
 
 .hero {
@@ -28,7 +63,20 @@
 	}
 }
 
-.resume-card {
-	transition: transform 0.3s ease-in-out;
+.resume-card .card {
+	background: linear-gradient(45deg, var(--resume-dark-bg), var(--hero-card-bg), transparent);
 
+	.list-title {
+		color: var(--dt-color);
+	}
+}
+
+.resume-card.flex {
+	animation: toTheRight 0.4s ease-in forwards;
+}
+
+@media (width<720px) {
+	.resume-card.flex {
+		animation: fromTheTop 0.2s ease-in forwards;
+	}
 }
