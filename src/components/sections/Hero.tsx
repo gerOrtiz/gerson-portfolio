@@ -5,7 +5,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import avatar from "@/assets/avatar.jpg";
 import Image from "next/image";
 import { FileText, X } from "lucide-react";
-import { motion } from 'framer-motion';
 import Link from "next/link";
 
 const statusMessages = [
