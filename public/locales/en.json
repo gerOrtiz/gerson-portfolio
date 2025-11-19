@@ -35,6 +35,7 @@
 	"projects": {
 		"title": "Recent Projects",
 		"action": "Go to website",
+		"download": "Download",
 		"expensesApp": {
 			"title": "Expenses App",
 			"subtitle": "Personal Finance Platform",
@@ -45,6 +46,11 @@
 				"mongodb": "MongoDB",
 				"tailwind": "Tailwind CSS"
 			}
+		},
+		"frostFind": {
+			"title": "Frost Find",
+			"subtitle": "Real-time ice cream truck tracker",
+			"description": "Built with React Native and Firebase. Features role-based authentication, live location sharing for drivers, interactive maps for customers, distance/ETA calculations, and a rewards system. Demonstrates modern mobile architecture with custom hooks, TypeScript throughout, and production-ready error handling."
 		}
 	},
 	"experience": {
