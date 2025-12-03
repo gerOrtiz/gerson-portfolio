@@ -18,7 +18,7 @@ export default function ThemeToggleButton() {
 	const isDark = useMemo(() => theme === 'dark', [theme]);
 
 	const handleSwitchClick = useCallback(() => {
-		setTheme(() => isDark ? 'light' : 'dark');
+		setTheme(isDark ? 'light' : 'dark');
 		setSparkClass('sparkle');
 		if (timer.current) clearTimeout(timer.current);
 		timer.current = setTimeout(() => {
@@ -39,7 +39,7 @@ export default function ThemeToggleButton() {
 			<span className="spark spark-1"></span>
 			<span className="spark spark-2"></span>
 			<span className="spark spark-3"></span>
-			<Sun className={`absolute right-1 w-4 h-4 text-amber-800 transition-opacity duration-300 ${isDark ? 'opacity-0' : 'opacity-100'}`} />
-			<Moon className={`absolute left-1 w-4 h-4 text-blue-100 transition-opacity duration-300 ${isDark ? 'opacity-100' : 'opacity-0'}`} />
+			<Sun role="img" aria-label="Sun" className={`absolute right-1 w-4 h-4 text-amber-800 transition-opacity duration-300 ${isDark ? 'opacity-0' : 'opacity-100'}`} />
+			<Moon role="img" aria-label="Moon" className={`absolute left-1 w-4 h-4 text-blue-100 transition-opacity duration-300 ${isDark ? 'opacity-100' : 'opacity-0'}`} />
 		</button>);
 }

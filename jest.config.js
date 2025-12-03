@@ -5,11 +5,23 @@ const createJestConfig = nextJest({
 	dir: './'
 });
 
-const customJestConfig = {
-	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-	testEnvironment: 'jsdom',
-	moduleDirectories: ['node_modules', '<rootDir>/'],
-	testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
-}
+// const customJestConfig = {
+// 	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+// 	testEnvironment: 'jsdom',
+// 	moduleDirectories: ['node_modules', '<rootDir>/'],
+// 	testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+// 	//for next-intl, ignore everything in node_modules except any file that has next-intl in it
+// 	transformIgnorePatterns: ['node_modules/(?!next-intl)/'],
+// }
 
-module.exports = createJestConfig(customJestConfig)
+// module.exports = createJestConfig(customJestConfig)
+module.exports = async () => ({
+	...(await createJestConfig({
+		setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+		testEnvironment: 'jsdom',
+		moduleDirectories: ['node_modules', '<rootDir>/'],
+		testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+	})()),
+	// for next-intl, ignore everything in node_modules except any file that has next-intl in it
+	transformIgnorePatterns: ['node_modules/(?!next-intl)/']
+});

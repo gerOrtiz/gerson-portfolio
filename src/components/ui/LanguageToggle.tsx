@@ -42,7 +42,7 @@ export default function LanguageToggle() {
 		>
 			<div className="flex w-full items-center gap-2">
 				<LanguagesIcon className={`w-4 h-4 ${style.text}`} />
-				<span className={style.text}>{locale === 'en' ? 'EN' : 'ES'}</span>
+				<span className={style.text}>{locale.toUpperCase()}</span>
 			</div>
 
 		</button>
