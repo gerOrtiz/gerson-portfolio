@@ -47,7 +47,7 @@ export default function Header() {
 					</div>
 
 					{/* Desktop Navigation */}
-					<div className="hidden md:flex items-center space-x-8">
+					<div data-testid="desktop-nav" className="hidden md:flex items-center space-x-8">
 						<Link href="#projects">{t('projects')}</Link>
 						<Link href="#experience">{t('experience')}</Link>
 						<Link href="#contact">{t('contact')}</Link>
@@ -63,11 +63,11 @@ export default function Header() {
 
 				{/* Mobile menu */}
 				{isMenuOpen && (
-					<div className="md:hidden border-t border-gray-200 pb-4 z-10">
+					<div data-testid="mobile-menu" className="md:hidden border-t border-gray-200 pb-4 z-10">
 						<div className="px-2 pt-2 space-y-1">
-							<a href="#projects" className="block px-3 py-2">{t('projects')}</a>
-							<a href="#experience" className="block px-3 py-2">{t('experience')}</a>
-							<a href="#contact" className="block px-3 py-2">{t('contact')}</a>
+							<Link href="#projects" className="block px-3 py-2">{t('projects')}</Link>
+							<Link href="#experience" className="block px-3 py-2">{t('experience')}</Link>
+							<Link href="#contact" className="block px-3 py-2">{t('contact')}</Link>
 						</div>
 						<div className="px-5 pt-2 space-y-1 pb-3">
 							<LanguageToggle />
