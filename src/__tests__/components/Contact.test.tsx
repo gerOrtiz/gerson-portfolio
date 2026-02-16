@@ -1,6 +1,6 @@
 import Contact from "@/components/sections/Contact";
 import { createIntlWrapper } from "@/utils/test-utils";
-import { cleanup, getAllByRole, render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 
 
 describe('Contact', () => {

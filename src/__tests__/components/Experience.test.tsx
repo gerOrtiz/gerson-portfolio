@@ -1,6 +1,6 @@
 import Experience from "@/components/sections/Experience";
 import { createIntlWrapper } from "@/utils/test-utils";
-import { cleanup, getByRole, render, screen, within } from "@testing-library/react";
+import { cleanup, render, screen, within } from "@testing-library/react";
 
 
 describe('Experience section', () => {

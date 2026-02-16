@@ -2,7 +2,6 @@ import Projects from '@/components/sections/Projects';
 import { createIntlWrapper } from '@/utils/test-utils';
 
 import { cleanup, render, screen, within } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 
 
 describe('Projects', () => {
