@@ -18,16 +18,16 @@ export default function Contact() {
 						{/* <Image src={linkedin} alt="linkedin" height={100} />
 						<Image src={github} alt="github" height={100} />
 						<Image src={envelope} alt="mail" height={100} /> */}
-						<a href="https://www.linkedin.com/in/gersonortizv/" className="flex flex-col items-center group">
-							<Image src={linkedin} alt="linkedin" height={100} className="lg:group-hover:h-[105px] lg:group-hover:max-w-[110%] lg:group-hover:w-[102%]" />
+						<a href="https://www.linkedin.com/in/gersonortizv/" aria-label="Connect on LinkedIn" className="flex flex-col items-center group">
+							<Image src={linkedin} alt="" height={100} className="lg:group-hover:h-[105px] lg:group-hover:max-w-[110%] lg:group-hover:w-[102%]" />
 							{t('anchor1')}
 						</a>
-						<a href="https://github.com/gerOrtiz" className="flex flex-col items-center group">
-							<Image src={git} alt="github" height={100} className="lg:group-hover:h-[105px] lg:group-hover:max-w-[110%] lg:group-hover:w-[102%]" />
+						<a href="https://github.com/gerOrtiz" aria-label="View code on GitHub" className="flex flex-col items-center group">
+							<Image src={git} alt="" height={100} className="lg:group-hover:h-[105px] lg:group-hover:max-w-[110%] lg:group-hover:w-[102%]" />
 							{t('anchor2')}
 						</a>
-						<a href="mailto:contacto.gersonortiz@gmail.com" className="flex flex-col items-center group">
-							<Image src={envelope} alt="envelope" height={100} className="lg:group-hover:h-[105px] lg:group-hover:max-w-[110%] lg:group-hover:w-[102%]" />
+						<a href="mailto:contacto.gersonortiz@gmail.com" aria-label="Email me at contacto.gersonortiz@gmail.com" className="flex flex-col items-center group">
+							<Image src={envelope} alt="" height={100} className="lg:group-hover:h-[105px] lg:group-hover:max-w-[110%] lg:group-hover:w-[102%]" />
 							{t('anchor3')}
 						</a>
 					</div>

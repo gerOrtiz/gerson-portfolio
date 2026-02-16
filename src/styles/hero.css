@@ -3,6 +3,7 @@
 	--under-card-bg: #77EBA2;
 	--hero-shadow: rgba(0, 0, 0, 0.4);
 	--resume-dark-bg: #57b5f1;
+	--text-shadow-color: #b6b0b0;
 }
 
 .dark {
@@ -10,6 +11,8 @@
 	--under-card-bg: #4ADE81;
 	--resume-dark-bg: #206898;
 	--dt-color: #e3e8f7;
+	--text-shadow-color: #0b2435;
+
 }
 
 @keyframes toTheRight {
@@ -63,12 +66,20 @@
 	}
 }
 
-.resume-card .card {
-	background: linear-gradient(45deg, var(--resume-dark-bg), var(--hero-card-bg), transparent);
+.list-title {
+	color: var(--dt-color);
+}
 
-	.list-title {
-		color: var(--dt-color);
-	}
+.textShadow {
+	text-shadow: 2px 2px 2px var(--text-shadow-color);
+}
+
+.light .resume-card .card {
+	background: linear-gradient(90deg, transparent, var(--hero-card-bg), var(--resume-dark-bg));
+}
+
+.dark .resume-card .card {
+	background: linear-gradient(45deg, var(--hero-card-bg), var(--resume-dark-bg));
 }
 
 .resume-card.flex {
