@@ -21,7 +21,7 @@ export default function Header() {
 	useEffect(() => {
 		if (isMenuOpen) document.addEventListener('mousedown', handleClickOutside);
 		return () => document.removeEventListener('mousedown', handleClickOutside);
-	}, [isMenuOpen]);
+	}, [isMenuOpen, handleClickOutside]);
 
 	return (
 		<header className="main-header sticky top-0 w-full z-50">

@@ -33,7 +33,7 @@ export default function Experience() {
 
 			{/* banner 1 */}
 			{/* <div className="card flex flex-wrap w-full lg:w-5/6 "> */}
-			<motion.div
+			<motion.div data-testid="banner 1"
 				className="card flex flex-wrap w-full lg:w-5/6"
 				initial="hiddenLeft"
 				whileInView="visible"
@@ -53,7 +53,7 @@ export default function Experience() {
 
 			{/* banner 2 */}
 			{/* <div className="card flex flex-wrap w-full lg:w-5/6"> */}
-			<motion.div
+			<motion.div data-testid="banner 2"
 				className="card flex flex-wrap w-full lg:w-5/6"
 				initial="hiddenRight"
 				whileInView="visible"
@@ -72,7 +72,7 @@ export default function Experience() {
 			{/* </div> */}
 			{/* banner 3 */}
 			{/* <div className="card flex flex-wrap w-full lg:w-5/6"> */}
-			<motion.div
+			<motion.div data-testid="banner 3"
 				className="card flex flex-wrap w-full lg:w-5/6"
 				initial="hiddenLeft"
 				whileInView="visible"

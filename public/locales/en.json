@@ -29,8 +29,8 @@
 		"button1": "Let's Talk",
 		"button2": "My Resume",
 		"resumeTitle": "My Resume",
-		"resume1": "English Resume",
-		"resume2": "Spanish Resume"
+		"resume1": "English",
+		"resume2": "Spanish"
 	},
 	"projects": {
 		"title": "Recent Projects",
