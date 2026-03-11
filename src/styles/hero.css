@@ -62,6 +62,7 @@
 
 		span {
 			font-size: .9rem;
+			text-shadow: 2px 2px 4px rgb(51 68 105 / 80%);
 		}
 	}
 }
