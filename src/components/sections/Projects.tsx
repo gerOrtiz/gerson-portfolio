@@ -1,5 +1,5 @@
 'use client';
-import expensesLanding from "@/assets/landing.jpg";
+import expensesLanding from "@/assets/expenses-landing.jpg";
 import onboarding from "@/assets/onboarding-screen.jpg";
 import mapScreen from "@/assets/map-screen.jpg";
 import loginScreen from "@/assets/login-screen.jpg";
