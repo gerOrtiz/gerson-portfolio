@@ -39,7 +39,7 @@
 		"expensesApp": {
 			"title": "Expenses App",
 			"subtitle": "Plataforma de finanzas personales",
-			"description": "Una aplicación web completa de seguimiento de gastos creada con Next.js 14 y TypeScript, con cálculos de saldo en tiempo real y categorización inteligente de gastos. Los usuarios pueden administrar tanto transacciones con efectivo y tarjeta, crear gastos proyectados para una mejor planeación financiera, y obtener información instantánea a través de un panel intuitivo.",
+			"description": "Aplicación full-stack de finanzas personales con autenticación mediante NextAuth, seguimiento de gastos y cálculo de saldo en tiempo real. Incluye gestión de formularios con React Hook Form, 49 pruebas automatizadas y cumplimiento de las directrices de accesibilidad WCAG. Lanzada en Vercel.",
 			"techStack": {
 				"nextjs": "Next.js",
 				"typescript": "TypeScript",

@@ -92,14 +92,14 @@ export default function Hero() {
 						<dl>
 							<dt className="list-title font-bold textShadow">{t('resume1')}</dt>
 							<dd className="ml-12 mb-4 flex gap-2 items-center">
-								<a href="/Gerson_Ortiz.pdf" download>
+								<a href="/Gerson_Ortiz_resume.pdf" download>
 									Gerson Resume
 								</a>
 								<FileText width={12} height={12} />
 							</dd>
 							<dt className="list-title font-bold textShadow">{t('resume2')}</dt>
 							<dd className="ml-12 flex gap-2 items-center">
-								<a href="/Gerson_Ortiz_CV.pdf" download>Gerson CV</a>
+								<a href="/Gerson_Ortiz.pdf" download>Gerson CV</a>
 								<FileText width={12} height={12} />
 							</dd>
 						</dl>
