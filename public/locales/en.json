@@ -39,7 +39,7 @@
 		"expensesApp": {
 			"title": "Expenses App",
 			"subtitle": "Personal Finance Platform",
-			"description": "A comprehensive expense tracking web application built with Next.js 14 and TypeScript, featuring real-time balance calculations and intelligent expense categorization. Users can manage both cash and card transactions, set up projected expenses for better financial planning, and get instant insights through an intuitive dashboard.",
+			"description": "Full-stack personal finance application with authentication via NextAuth, expense tracking, and real-time balance calculations. Features form handling with React Hook Form, 49 automated tests, and WCAG accessibility compliance. Deployed live on Vercel.",
 			"techStack": {
 				"nextjs": "Next.js",
 				"typescript": "TypeScript",
@@ -48,7 +48,7 @@
 			}
 		},
 		"frostFind": {
-			"title": "Frost Find",
+			"title": "Frost Find | React Native · TypeScript · Firebase",
 			"subtitle": "Real-time ice cream truck tracker",
 			"description": "Built with React Native and Firebase. Features role-based authentication, live location sharing for drivers, interactive maps for customers, distance/ETA calculations, and a rewards system. Demonstrates modern mobile architecture with custom hooks, TypeScript throughout, and production-ready error handling."
 		}

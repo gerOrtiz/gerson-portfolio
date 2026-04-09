@@ -37,7 +37,7 @@ describe('Projects', () => {
 			const container = screen.getByTestId('expenses project');
 			const logosContainer = within(container).getByTestId('logos');
 			const logos = within(logosContainer).queryAllByRole('img');
-			expect(logos).toHaveLength(5);
+			expect(logos).toHaveLength(6);
 		});
 
 		it('renders correct navigation link', () => {
