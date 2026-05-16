@@ -1,5 +1,5 @@
 'use client';
-import expensesLanding from "@/assets/expenses-landing.jpg";
+import expensesLanding from "@/assets/new-expenses-landing.png";
 import onboarding from "@/assets/onboarding-screen.jpg";
 import mapScreen from "@/assets/map-screen.jpg";
 import loginScreen from "@/assets/login-screen.jpg";
@@ -48,7 +48,7 @@ export default function Projects() {
 						<Image src={expensesLanding} alt="expenses-app frontpage" className="w-full rounded-3xl" width={600} priority />
 					</div>
 					<div className="card w-full lg:w-[60%] flex flex-col justify-self-center justify-center items-center py-9 px-6 min-h-80" >
-						<div className="py-2 pt-6 lg:py-6 px-1 lg:px-10 mt-14 lg:mt-20 flex flex-col gap-4">
+						<div className="py-2 pt-6 lg:py-6 px-1 lg:px-10 mt-14 lg:mt-24 flex flex-col gap-4">
 							<div>
 								<h3>Expenses App </h3>
 								<h4>{t('expensesApp.subtitle')}</h4>

@@ -39,7 +39,7 @@
 		"expensesApp": {
 			"title": "Expenses App",
 			"subtitle": "Plataforma de finanzas personales",
-			"description": "Aplicación full-stack de finanzas personales con autenticación mediante NextAuth, seguimiento de gastos y cálculo de saldo en tiempo real. Incluye gestión de formularios con React Hook Form, 49 pruebas automatizadas y cumplimiento de las directrices de accesibilidad WCAG. Lanzada en Vercel.",
+			"description": "Comenzó como un reemplazo personal para una hoja de cálculo, ahora es una applicación full-stack en producción con Google OAuth, un pipeline CI/CD via GitHub Actions, y 84 pruebas automáticas. Ofrece seguimiento de presupuesto por período, administrador de gastos pendientes, y calculos automatizados de saldo, todo con cumplimiento de accesibilidad WCAG y cero errores en auditorías de WAVE y axe.",
 			"techStack": {
 				"nextjs": "Next.js",
 				"typescript": "TypeScript",
