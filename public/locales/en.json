@@ -39,7 +39,7 @@
 		"expensesApp": {
 			"title": "Expenses App",
 			"subtitle": "Personal Finance Platform",
-			"description": "Full-stack personal finance application with authentication via NextAuth, expense tracking, and real-time balance calculations. Features form handling with React Hook Form, 49 automated tests, and WCAG accessibility compliance. Deployed live on Vercel.",
+			"description": "Started as a personal spreadsheet replacement, now a full-stack production app with Google OAuth, CI/CD pipeline via GitHub Actions, and 84 automated tests. Features budget period tracking, pending expense management, and automated balance calculations, all with WCAG accessibility compliance and zero errors on WAVE and axe audits.",
 			"techStack": {
 				"nextjs": "Next.js",
 				"typescript": "TypeScript",
