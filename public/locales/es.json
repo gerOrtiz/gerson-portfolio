@@ -25,12 +25,16 @@
 		"Transforming ideas into interactive realities": "Transformando ideas en realidades interactivas",
 		"Available for your next big project": "Disponible para tu próximo gran proyecto",
 		"status": "Disponible",
-		"subtitle": "Desarrolador Frontend Senior",
+		"subtitle": "Desarrollador Frontend Senior",
 		"button1": "Hablemos",
 		"button2": "Mi CV",
-		"resumeTitle": "Mi CV",
+		"resumeModalCloseBtn": "Cierra dialogo",
+		"resumeModalTitle": "Mi CV",
+		"resumeModalSubtitle": "Selecciona el archivo en el idioma de tu preferencia",
 		"resume1": "CV en Inglés",
-		"resume2": "CV en Español"
+		"resume2": "CV en Español",
+		"download": "Descargar",
+		"close": "Cerrar"
 	},
 	"projects": {
 		"title": "Proyectos Recientes",

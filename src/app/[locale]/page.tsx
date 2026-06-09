@@ -5,7 +5,7 @@ import Projects from "@/components/sections/Projects";
 
 export default function Home() {
 	return (
-		<main className="min-h-screen flex flex-col gap-10 px-6 lg:px-4 py-10 lg:py-20">
+		<main className="min-h-dvh flex flex-col gap-0 pb-10 lg:pb-20">
 			<Hero />
 
 			<Projects />

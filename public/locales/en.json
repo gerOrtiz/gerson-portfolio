@@ -28,9 +28,13 @@
 		"subtitle": "Senior Frontend Developer",
 		"button1": "Let's Talk",
 		"button2": "My Resume",
-		"resumeTitle": "My Resume",
+		"resumeModalCloseBtn": "Close resume modal",
+		"resumeModalTitle": "My Resume",
+		"resumeModalSubtitle": "Select your preferred language to download",
 		"resume1": "English",
-		"resume2": "Spanish"
+		"resume2": "Spanish",
+		"download": "Download",
+		"close": "Close"
 	},
 	"projects": {
 		"title": "Recent Projects",

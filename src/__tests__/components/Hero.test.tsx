@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import Hero from '@/components/sections/Hero';
-import { cleanup, render, screen, waitFor } from '@testing-library/react';
+import { cleanup, render, screen, waitFor, within } from '@testing-library/react';
 import { createIntlWrapper } from '@/utils/test-utils';
 import userEvent from '@testing-library/user-event';
 
@@ -14,9 +14,12 @@ describe('Hero', () => {
 	});
 
 	it('renders correct header and subtitle', () => {
-		const header = screen.getByRole('heading', { level: 2 });
-		const subtitle = screen.getByRole('heading', { level: 3 });
-		expect(header).toHaveTextContent(/portfolio - gerson ortiz/i);
+		const titles = screen.getAllByRole('heading', { level: 1 });
+		const subtitle = screen.getByRole('heading', { level: 2 });
+		expect(titles.length).toBe(2);
+		expect(titles[0]).toHaveTextContent(/portfolio - gerson ortiz/i);
+		expect(titles[1]).toHaveTextContent(/gerson ortiz/i);
+		expect(titles[1].style.fontFamily).toBe('var(--font-display)');
 		expect(subtitle).toHaveTextContent(/frontend developer/i);
 	});
 
@@ -40,24 +43,31 @@ describe('Hero', () => {
 	});
 
 	it('has hidden card', () => {
-		const resumeCard = screen.getByTestId('resume-card');
-		expect(resumeCard).toHaveClass('hidden');
+		const resumeDialog = screen.queryByRole('dialog', { name: /my resume/i });
+		expect(resumeDialog).not.toBeInTheDocument();
 	});
 
-	it('shows resume card after click', async () => {
-		const resumeCard = screen.getByTestId('resume-card');
+	it('shows resume dialog after click', async () => {
 		const resumeBtn = screen.getByRole('button', { name: /my resume/i });
 		await userEvent.click(resumeBtn);
-		expect(resumeCard).toHaveClass('flex');
+		const resumeDialog = await screen.findByRole('dialog', { name: /my resume/i });
+		expect(resumeDialog).toBeInTheDocument();
+		const links = within(resumeDialog).getAllByRole('link');
+		expect(links.length).toBe(2);
+		expect(links[0]).toHaveAttribute('download');
+		expect(links[0]).toHaveAttribute('href', '/Gerson_Ortiz_resume.pdf');
+		expect(links[1]).toHaveAttribute('download');
+		expect(links[1]).toHaveAttribute('href', '/Gerson_Ortiz.pdf');
 	});
 
 	it('hides resume card after click icon', async () => {
-		const resumeCard = screen.getByTestId('resume-card');
 		const resumeBtn = screen.getByRole('button', { name: /my resume/i });
 		await userEvent.click(resumeBtn);
-		const closeBtn = screen.getByRole('button', { name: /close resume card/i });
+		const resumeDialog = await screen.findByRole('dialog');
+
+		const closeBtn = within(resumeDialog).getByRole('button', { name: /close resume modal/i });
 		await userEvent.click(closeBtn);
-		expect(resumeCard).toHaveClass('hidden');
+		expect(screen.queryByRole('dialog', { name: /my resume/i })).not.toBeInTheDocument();
 	});
 
 });

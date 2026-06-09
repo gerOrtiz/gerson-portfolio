@@ -3,11 +3,13 @@
 @tailwind utilities;
 @import '@/styles/buttons.css';
 @import '@/styles/cards.css';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 :root {
 	/* Typography */
 	--font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 	--font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+	--font-display: 'Playfair Display', Georgia, serif;
 }
 
 /* Base Styles */
@@ -63,9 +65,10 @@ span {
 a:not(.btn-link) {
 	color: var(--link);
 	text-decoration: none;
+	font-weight: 600;
 	transition: var(--transition);
 	position: relative;
-	font-size: clamp(.9rem, 1.5vw, 1rem);
+	font-size: clamp(1rem, 1.5vw, 1.1rem);
 
 	&::after {
 		content: '';
@@ -90,9 +93,35 @@ a:not(.btn-link) {
 }
 
 header.main-header {
-	background-color: var(--header-bg);
-	box-shadow: 0 2px 4px var(--header-shadow);
+	/* background-color: var(--header-bg); */
+	background: transparent;
+	/* box-shadow: 0 2px 4px var(--header-shadow); */
+	width: 100%;
+	position: fixed;
+	max-width: 100dvw;
+	/* top: 0; */
+	/* container-type: scroll-state; */
+
+	.nav-bar {
+		background-color: rgba(255, 255, 255, 0.15);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		box-shadow: 0 2px 4px var(--header-shadow);
+		width: 100%;
+		border-radius: 0;
+		transition: width 0.4s ease, border-radius 0.4s ease, background-color 0.4s ease;
+
+		@media (min-width: 768px) {
+			&.scrolled {
+				width: 56rem;
+				border-radius: 20px;
+			}
+		}
+
+	}
 }
+
+
 
 footer.main-footer {
 	background-color: var(--footer-bg);

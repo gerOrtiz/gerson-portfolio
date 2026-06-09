@@ -31,7 +31,7 @@ describe('Header', () => {
     });
     it('renders with correct header classes', () => {
       const header = screen.getByRole('banner');
-      expect(header).toHaveClass('main-header sticky');
+      expect(header).toHaveClass('main-header z-50');
     });
 
     describe('Desktop navigation', () => {
