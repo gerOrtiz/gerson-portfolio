@@ -14,7 +14,6 @@
 	--border: #e2e8f0;
 	--input: #ffffff;
 
-
 	/* Accent Colors */
 	--accent: #1f1d4e;
 	--accent-foreground: #ffffff;
@@ -85,6 +84,30 @@
 	--shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.1), 0 1px 2px -1px rgba(255, 255, 255, 0.1);
 	--shadow-lg: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -4px rgba(255, 255, 255, 0.1);
 }
+
+#projects {
+	--divider-bg: #f8f7f4;
+}
+
+.dark {
+	#projects {
+		--divider-bg: #312e81;
+	}
+}
+
+/* 
+Dark theme (hero is #312e81):
+
+Projects: #0f172a (the gradient-start, deep navy — strong contrast with indigo hero)
+Experience: #1e1b4b (mid indigo — steps back toward hero color)
+Contact: #0f172a (back to deep navy)
+
+Light theme (hero is #f8f7f4):
+
+Projects: #e0e7ff (light indigo tint — visible contrast with near-white hero)
+Experience: #f1f5f9 (slate, close to gradient-end)
+Contact: #e0e7ff (back to light indigo)
+ */
 
 html {
 	background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));

@@ -1,0 +1,17 @@
+:root {
+  --projects-bg: #e0e7ff;
+  /* Marquee */
+  --pill-bg: rgba(255, 255, 255, 0.08);
+  --mask: white;
+}
+
+.dark {
+  --projects-bg: #1e1b4b;
+  /* Marquee */
+  --pill-bg: rgba(255, 255, 255, 0.08);
+  --mask: black;
+}
+
+section#projects {
+  background-color: var(--projects-bg);
+}

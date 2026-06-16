@@ -23,61 +23,86 @@ describe('Projects', () => {
 	// });
 	describe('Expenses app', () => {
 		it('has responsive classes', () => {
-			const imageDiv = screen.getByTestId('expenses image');
-			expect(imageDiv).toHaveClass('w-11/12 lg:w-1/2 translate-y-1/2 lg:translate-y-1/3 hover:shadow-lg hover:shadow-blue-300');
+			const expensesDiv = screen.getByTestId('expenses-app');
+			expect(expensesDiv).toHaveClass('flex-col lg:flex-row px-4 lg:px-6 gap-20 lg:gap-3');
 		});
 
-		it('image has proper alt text', () => {
-			const imageDiv = screen.getByTestId('expenses image');
-			const image = within(imageDiv).getByRole('img');
-			expect(image).toHaveAttribute('alt', 'expenses-app frontpage');
+		it('displays proper alt text for main image inside slider', () => {
+			const imageDiv = screen.getAllByTestId('carousel-main-image');
+			const image = within(imageDiv[0]).getByRole('img');
+			expect(image).toHaveAttribute('alt', 'expenses app landing page');
+		});
+
+		it('shows at least 5 thumnail images', () => {
+			const expensesDiv = screen.getByTestId('expenses-app');
+			const thumbnailsWrapper = within(expensesDiv).getByTestId('thumbnails');
+			const thumbnailButtons = within(thumbnailsWrapper).getAllByRole('button');
+			expect(thumbnailButtons.length).toBeGreaterThanOrEqual(5);
+			for (let index = 0; index < thumbnailButtons.length; index++) {
+				const imageButton = thumbnailButtons[index];
+				const image = within(imageButton).getByRole('img');
+				expect(image).toBeInTheDocument();
+				expect(image).toHaveAccessibleName();
+			}
 		});
 
 		it('displays correct number of logos', () => {
-			const container = screen.getByTestId('expenses project');
-			const logosContainer = within(container).getByTestId('logos');
-			const logos = within(logosContainer).queryAllByRole('img');
-			expect(logos).toHaveLength(6);
+			const techMarquee = screen.getAllByTestId('tech-marquee');
+			const logos = within(techMarquee[0]).getAllByRole('img');
+			// Base number of logos should be 8, tech marquee doubles that
+			expect(logos.length).toBeGreaterThanOrEqual(16);
+			for (let index = 0; index < logos.length; index++) {
+				const image = logos[index];
+				expect(image).toHaveAccessibleName();
+			}
 		});
 
 		it('renders correct navigation link', () => {
-			const container = screen.getByTestId('expenses project');
-			const link = within(container).getByRole('link', { name: /go to website/i });
+			const expensesDiv = screen.getByTestId('expenses-app');
+			const link = within(expensesDiv).getByRole('link', { name: /go to website/i });
 			expect(link).toHaveAttribute('href', 'https://expenses-app-2.vercel.app');
 		});
 	});
 
 	describe('Frost find', () => {
+		it('has responsive classes', () => {
+			const frostFindDiv = screen.getByTestId('frost-find');
+			expect(frostFindDiv).toHaveClass('flex-col lg:flex-row px-4 lg:px-6 gap-6 lg:gap-3');
+		});
+
+		it('displays proper alt text for main image inside slider', () => {
+			const imageDiv = screen.getAllByTestId('carousel-main-image');
+			const image = within(imageDiv[1]).getByRole('img');
+			expect(image).toHaveAttribute('alt', 'frost find onboarding');
+		});
+		it('shows at least 5 thumnail images', () => {
+			const frostFindDiv = screen.getByTestId('frost-find');
+			const thumbnailsWrapper = within(frostFindDiv).getByTestId('thumbnails');
+			const thumbnailButtons = within(thumbnailsWrapper).getAllByRole('button');
+			expect(thumbnailButtons.length).toBeGreaterThanOrEqual(5);
+			for (let index = 0; index < thumbnailButtons.length; index++) {
+				const imageButton = thumbnailButtons[index];
+				const image = within(imageButton).getByRole('img');
+				expect(image).toBeInTheDocument();
+				expect(image).toHaveAccessibleName();
+			}
+		});
 		it('displays correct number of logos', () => {
-			const container = screen.getByTestId('frost project');
-			const logosContainer = within(container).getByTestId('logos');
-			const logos = within(logosContainer).queryAllByRole('img');
-			expect(logos).toHaveLength(5);
+			const techMarquee = screen.getAllByTestId('tech-marquee');
+			const logos = within(techMarquee[1]).getAllByRole('img');
+			// Base number of logos should be 5, tech marquee doubles that
+			expect(logos.length).toBeGreaterThanOrEqual(10);
+			for (let index = 0; index < logos.length; index++) {
+				const image = logos[index];
+				expect(image).toHaveAccessibleName();
+			}
 		});
 
 		it('renders correct navigation link', () => {
-			const container = screen.getByTestId('frost project');
-			const link = within(container).getByRole('link', { name: /download/i });
+			const frostFindDiv = screen.getByTestId('frost-find');
+			const link = within(frostFindDiv).getByRole('link', { name: /download/i });
 			expect(link).toHaveAttribute('href', 'https://expo.dev/accounts/gerortiz/projects/frost-find/builds/0360ce7f-954b-4aa1-8f68-6598128a5c86');
 		});
-		it('has responsive classes', () => {
-			const imageDiv = screen.getByTestId('frost-find images');
-			expect(imageDiv).toHaveClass('w-11/12 lg:w-1/2 -translate-y-1/4 lg:-translate-y-[20%]');
-			const imageContainers = within(imageDiv).queryAllByTestId('image container');
-			expect(imageContainers.length).toBeGreaterThan(0);
-
-			imageContainers.forEach(imageContainer =>
-				expect(imageContainer).toHaveClass('hover:shadow-lg hover:shadow-blue-300 bg-white')
-			);
-		});
-
-		it('displays at least 2 images', () => {
-			const imageDiv = screen.getByTestId('frost-find images');
-			const images = within(imageDiv).queryAllByRole('img');
-			const length = images.length;
-			expect(length).toBeGreaterThanOrEqual(2);
-		});
-
 	});
 
 

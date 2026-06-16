@@ -1,0 +1,20 @@
+.section-divider {
+	position: relative;
+	line-height: 0;
+	display: inline-block;
+	max-height: 180px;
+}
+
+.section-divider svg {
+	/* width: 100%;
+	height: auto; */
+	/* max-height: inherit; */
+	display: block;
+}
+
+.section-divider h2 {
+	position: absolute;
+	inset: 0;
+	/* line-height: 1.2; */
+	margin: 0;
+}
