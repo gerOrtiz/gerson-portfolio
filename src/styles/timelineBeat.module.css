@@ -5,13 +5,13 @@
 	border-radius: 14px;
 
 	&.crookedLeft {
-		transform: rotate(-2deg);
+		transform: rotate(-2deg) !important;
 		box-shadow: -9px 9px 3px 7px var(--beat-shadow);
 		-webkit-box-shadow: -9px 9px 3px 7px var(--beat-shadow);
 	}
 
 	&.crookedRight {
-		transform: rotate(2deg);
+		transform: rotate(2deg) !important;
 		box-shadow: 9px 8px 3px 7px var(--beat-shadow);
 		-webkit-box-shadow: 9px 8px 3px 7px var(--beat-shadow);
 	}
@@ -42,6 +42,15 @@ div.spine {
 		flex: 1 1 0%;
 		width: 2px;
 		background-color: var(--timeline-background);
-		/* box-shadow: 0px 0px 10px 1px var(--timeline-shadow); */
+	}
+
+	.spineLine:first-child {
+		mask-image: linear-gradient(to bottom, transparent, white 70%);
+		-webkit-mask-image: linear-gradient(to bottom, transparent, white 70%);
+	}
+
+	.spineLine:last-child {
+		mask-image: linear-gradient(to bottom, white 30%, transparent);
+		-webkit-mask-image: linear-gradient(to bottom, white 30%, transparent);
 	}
 }
