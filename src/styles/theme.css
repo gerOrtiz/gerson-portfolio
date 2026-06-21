@@ -89,25 +89,20 @@
 	--divider-bg: #f8f7f4;
 }
 
+#experience {
+	--divider-bg: #e0e7ff;
+}
+
 .dark {
 	#projects {
 		--divider-bg: #312e81;
 	}
+
+	#experience {
+		--divider-bg: #1e1b4b;
+	}
 }
 
-/* 
-Dark theme (hero is #312e81):
-
-Projects: #0f172a (the gradient-start, deep navy — strong contrast with indigo hero)
-Experience: #1e1b4b (mid indigo — steps back toward hero color)
-Contact: #0f172a (back to deep navy)
-
-Light theme (hero is #f8f7f4):
-
-Projects: #e0e7ff (light indigo tint — visible contrast with near-white hero)
-Experience: #f1f5f9 (slate, close to gradient-end)
-Contact: #e0e7ff (back to light indigo)
- */
 
 html {
 	background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));

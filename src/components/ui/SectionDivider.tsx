@@ -23,6 +23,19 @@ export default function SectionDivider({ title }: SectionDividerProps) {
 				</g>
 
 			</svg>
+			{/* 
+			<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true" viewBox="0 0 1440 320">
+			  <defs>
+    <!-- Define the gradient and direction -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00c6ff" />
+      <stop offset="100%" stop-color="#0072ff" />
+    </linearGradient>
+  </defs>
+			<path fill="url(#blueGrad)" fill-opacity="1" d="M0,192L40,192C80,192,160,192,240,186.7C320,181,400,171,480,181.3C560,192,640,224,720,240C800,256,880,256,960,229.3C1040,203,1120,149,1200,144C1280,139,1360,181,1400,202.7L1440,224L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+			</path>
+			</svg>
+			 */}
 			<h2 className="flex flex-col items-center leading-3 md:leading-4 lg:leading-5 pt-1 lg:pt-2 px-7 lg:px-10">{title}</h2>
 		</div>
 	);

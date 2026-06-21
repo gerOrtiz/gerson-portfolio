@@ -1,5 +1,4 @@
 'use client';
-import '@/styles/projects.css';
 // expenses app screenshots
 import expensesLanding from "@/assets/expenses-app/new-expenses-landing.png";
 import expensesDashboard from "@/assets/expenses-app/dashboard.png";
@@ -55,7 +54,7 @@ export default function Projects() {
 	const t = useTranslations('projects');
 	return (
 		<section id="projects" className="px-0 flex flex-col gap-5 pb-20 lg:pb-10">
-			<SectionDivider title={t('title')} color="#312e81" />
+			<SectionDivider title={t('title')} />
 			{/* Expenses App */}
 			<div data-testid="expenses-app" className="w-full flex flex-col lg:flex-row px-4 lg:px-6 gap-20 lg:gap-3 items-center mb-3">
 				<div className="w-full lg:w-2/5">
@@ -92,11 +91,6 @@ export default function Projects() {
 						</div>
 						<div className="mt-2">
 							<p >{t('frostFind.description')}</p>
-							{/* <div data-testid="logos" className="flex flex-wrap w-full justify-center gap-2 lg:gap-4 lg:my-8">
-								{expensesLogos.map((logo) => (
-									<Image key={logo.name} src={logo.logo} alt={logo.name} height={50} className="h-10 w-auto lg:h-14" />
-								))}
-							</div> */}
 							<div className="flex justify-self-center w-full lg:w-4/5 my-8">
 								<TechMarquee logos={frostLogos} direction="right" />
 							</div>

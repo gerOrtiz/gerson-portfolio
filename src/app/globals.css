@@ -4,6 +4,8 @@
 @import '@/styles/buttons.css';
 @import '@/styles/cards.css';
 @import '@/styles/sections-divider.css';
+@import '@/styles/projects.css';
+@import '@/styles/experience.css';
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 :root {

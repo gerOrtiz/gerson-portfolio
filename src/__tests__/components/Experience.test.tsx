@@ -16,61 +16,78 @@ describe('Experience section', () => {
 		expect(title).toHaveTextContent('Experience');
 	});
 
-	describe('banner 1', () => {
-		it('render with responsive classes', () => {
-			const banner1 = screen.getByTestId('banner 1');
-			expect(banner1).toHaveClass('w-full lg:w-5/6');
+	describe('TimelineBeat', () => {
+		it('should display a column at all times', () => {
+			const timeline = screen.getByTestId('beats-container');
+			expect(timeline).toBeInTheDocument();
+			expect(timeline).toHaveClass('flex flex-col');
+		});
+		it('should display at least 3 beats', () => {
+			const timeline = screen.getByTestId('beats-container');
+			const rows = within(timeline).getAllByTestId('row');
+			expect(rows.length).toBeGreaterThanOrEqual(3);
+		});
+		it('should have mobile classes to handle spine placement', () => {
+			const timeline = screen.getByTestId('beats-container');
+			const rows = within(timeline).getAllByTestId('row');
+			for (let index = 0; index < rows.length; index++) {
+				const row = rows[index];
+				if (index % 2 === 0) {
+					expect(row).toHaveClass('flex-row-reverse lg:flex-row justify-end gap-8');
+				} else {
+					expect(row).toHaveClass('justify-start gap-4');
+				}
+			}
+		});
+		it('should show alternate crooked positions for beats', () => {
+			const timeline = screen.getByTestId('beats-container');
+			const rows = within(timeline).getAllByTestId('row');
+			for (let index = 0; index < rows.length; index++) {
+				const row = rows[index];
+				const beat = within(row).getByTestId('beat');
+				if (index % 2 === 0) {
+					expect(beat).toHaveClass('crookedLeft');
+				} else {
+					expect(beat).toHaveClass('crookedRight');
+				}
+			}
+		});
+		it('should show a spine on each row', () => {
+			const timeline = screen.getByTestId('beats-container');
+			const rows = within(timeline).getAllByTestId('row');
+			for (let index = 0; index < rows.length; index++) {
+				const row = rows[index];
+				const container = within(row).getByTestId('spine-container');
+				expect(container).toBeInTheDocument();
+				if (index === 0) {
+					expect(container).toHaveClass('justify-start');
+				} else if (index === rows.length - 1) {
+					expect(container).toHaveClass('justify-end');
+				} else expect(container).toHaveClass('justify-center');
+			}
+		});
+		it('should a dot on each spine', () => {
+			const timeline = screen.getByTestId('beats-container');
+			const rows = within(timeline).getAllByTestId('row');
+			for (let index = 0; index < rows.length; index++) {
+				const row = rows[index];
+				const container = within(row).getByTestId('spine-container');
+				const dot = within(container).getByTestId('dot');
+				expect(dot).toBeInTheDocument();
+				expect(dot).toHaveClass('spineDot');
+			}
+		});
+		it('should have an empty div in each row', () => {
+			const timeline = screen.getByTestId('beats-container');
+			const rows = within(timeline).getAllByTestId('row');
+			for (let index = 0; index < rows.length; index++) {
+				const row = rows[index];
+				const emptySpace = within(row).getByTestId('empty');
+				expect(emptySpace).toBeInTheDocument();
+				expect(emptySpace).toHaveClass('w-0 hidden lg:flex lg:w-[45%] flex-shrink');
+			}
 		});
 
-		it('displays correct heading title', () => {
-			const banner1 = screen.getByTestId('banner 1');
-			const heading = within(banner1).getByRole('heading', { level: 3 });
-			expect(heading).toHaveTextContent('From AngularJS to Modern React');
-		});
-
-		it('has correct alt for image', () => {
-			const banner1 = screen.getByTestId('banner 1');
-			const image = within(banner1).getByRole('img');
-			expect(image).toHaveAttribute('alt', 'frontend banner');
-		});
-	});
-
-	describe('banner 2', () => {
-		it('render with responsive classes', () => {
-			const banner2 = screen.getByTestId('banner 2');
-			expect(banner2).toHaveClass('w-full lg:w-5/6');
-		});
-
-		it('displays correct heading title', () => {
-			const banner2 = screen.getByTestId('banner 2');
-			const heading = within(banner2).getByRole('heading', { level: 3 });
-			expect(heading).toHaveTextContent('Building Complex Business Features');
-		});
-
-		it('has correct alt for image', () => {
-			const banner2 = screen.getByTestId('banner 2');
-			const image = within(banner2).getByRole('img');
-			expect(image).toHaveAttribute('alt', 'diagram banner');
-		});
-	});
-
-	describe('banner 3', () => {
-		it('render with responsive classes', () => {
-			const banner3 = screen.getByTestId('banner 3');
-			expect(banner3).toHaveClass('w-full lg:w-5/6');
-		});
-
-		it('displays correct heading title', () => {
-			const banner3 = screen.getByTestId('banner 3');
-			const heading = within(banner3).getByRole('heading', { level: 3 });
-			expect(heading).toHaveTextContent('Self-Taught Quality Assurance');
-		});
-
-		it('has correct alt for image', () => {
-			const banner3 = screen.getByTestId('banner 3');
-			const image = within(banner3).getByRole('img');
-			expect(image).toHaveAttribute('alt', 'debug banner');
-		});
 	});
 
 

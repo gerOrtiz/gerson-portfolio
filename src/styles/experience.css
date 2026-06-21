@@ -1,0 +1,40 @@
+:root {
+	--experience-bg: #f7f4ff;
+	--experience-beat-bg: #ffffff;
+	--beat-shadow: #9ea0ff;
+	--tag-bg: #6b3aa8;
+	--tag-text: #ede9fe;
+	--timeline-shadow: rgba(76, 42, 133, 0.25);
+	;
+	--timeline-background: #4c2a85;
+	--timeline-border: #6b3aa8;
+}
+
+.dark {
+	--experience-bg: #461978;
+	--experience-beat-bg: #5d2a99;
+	--beat-shadow: #1a0833;
+	--timeline-shadow: rgba(150, 196, 255, 0.7);
+	--timeline-background: white;
+	--timeline-border: #96c4ff;
+}
+
+section#experience {
+	background-color: var(--experience-bg);
+}
+
+h3.title {
+	text-shadow: 1px 1px rgb(105, 105, 105);
+}
+
+img.fit {
+	width: 100%;
+	aspect-ratio: 1/1;
+	object-fit: contain;
+}
+
+@media (width<768px) {
+	img.fit {
+		width: 80%;
+	}
+}
