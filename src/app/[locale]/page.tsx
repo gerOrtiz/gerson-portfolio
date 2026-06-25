@@ -5,7 +5,7 @@ import Projects from "@/components/sections/Projects";
 
 export default function Home() {
 	return (
-		<main className="min-h-dvh flex flex-col gap-0 pb-10 lg:pb-20">
+		<main className="min-h-dvh flex flex-col gap-0">
 			<Hero />
 
 			<Projects />

@@ -86,26 +86,37 @@
 }
 
 #projects {
-	--divider-bg: #f8f7f4;
+	--divider-bg-start: var(--hero-bg);
+	--divider-bg-end: var(--projects-bg);
 }
 
 #experience {
-	--divider-bg: #e0e7ff;
+	--divider-bg-start: var(--projects-bg);
+	--divider-bg-end: var(--experience-bg);
 }
 
-.dark {
+#contact {
+	--divider-bg-start: var(--experience-bg);
+	--divider-bg-end: var(--contact-bg);
+}
+
+/* .dark {
 	#projects {
-		--divider-bg: #312e81;
+		--divider-bg-start: #312e81;
 	}
 
 	#experience {
-		--divider-bg: #1e1b4b;
+		--divider-bg-start: #1e1b4b;
 	}
-}
+
+	#contact {
+		--divider-bg-start: #461978;
+	}
+} */
 
 
 html {
-	background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+	/* background: linear-gradient(to right, var(--gradient-start), var(--gradient-end)); */
 	color: var(--muted-foreground);
 	transition: background-color 0.3s ease, color 0.3s ease;
 }

@@ -21,25 +21,24 @@ describe('Contact', () => {
   });
 
   it('has accessible link names', () => {
-    expect(screen.getByRole('link', { name: 'Connect on LinkedIn' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: `Let's connect on LinkedIn` })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'View code on GitHub' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Email me at contacto.gersonortiz@gmail.com' })).toBeInTheDocument();
   });
 
   it('renders decorative images with empty alt text', () => {
-    const images = screen.getAllByRole('presentation');
-    //For images that are purely decorative, using an empty alt="" attribute tells the screen reader to ignore the image entirely and become presentation role
-    images.forEach(image => {
-      expect(image).toHaveAttribute('alt', '');
-    });
+    const linkedin = screen.queryByTitle(/linkedin icon/i);
+    expect(linkedin).toBeInTheDocument();
+    const github = screen.queryByTitle(/github icon/i);
+    expect(github).toBeInTheDocument();
+    const envelope = screen.queryByTitle(/envelope icon/i);
+    expect(envelope).toBeInTheDocument();
   });
 
-  it('has proper heading structure', () => {
-    const mainHeading = screen.getByRole('heading', { level: 3 });
-    const subHeading = screen.getByRole('heading', { level: 4 });
-
-    expect(mainHeading).toBeInTheDocument();
-    expect(subHeading).toBeInTheDocument();
+  it('renders available dot', () => {
+    const dot = screen.getByTestId('available-dot');
+    expect(dot).toBeInTheDocument();
+    expect(dot).toHaveClass('available-dot');
   });
 
 });

@@ -1,0 +1,100 @@
+:root {
+	--contact-bg: #ece5ff;
+	--contact-link-bg: #f1f1f1;
+	--contact-link-hover: #DDDDDD;
+	--contact-link-shadow: rgba(112, 112, 112, 0.8);
+	--contact-link-container: 230, 230, 230;
+	--contact-link-container-bg: #fff;
+	--contact-github-color: black;
+	--contact-linkedin-color: black;
+	--contact-mail-color: black;
+}
+
+.dark {
+	--contact-bg: var(--hero-bg);
+	--contact-link-bg: #7866fb;
+	--contact-link-hover: #4912f7;
+	--contact-link-shadow: rgba(21, 21, 21, 0.7);
+	--contact-link-container: 98, 107, 160;
+	--contact-link-container-bg: blue;
+}
+
+section#contact {
+	background-color: var(--contact-bg);
+}
+
+div.contactCard {
+	background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+	box-shadow: 0px 6px 15px 0px var(--hero-shadow);
+
+	div.linkContainer {
+		background-color: var(--contact-link-container-bg);
+		box-shadow: inset 0px 0px 48px 1px rgb(var(--contact-link-container));
+		border: 1px solid rgba(var(--contact-link-container), 0.8);
+		border-radius: 100%;
+		width: 8rem;
+		height: 8rem;
+	}
+
+	a.icon-link {
+		isolation: isolate;
+		width: 6rem;
+		height: 6rem;
+		padding: 24px;
+		border-radius: 100%;
+		background-color: var(--contact-link-bg);
+		box-shadow: 0px 2px 8px 2px var(--contact-link-shadow);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: padding 0.4s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+
+
+		&:hover {
+			background-color: var(--contact-link-hover);
+			padding: 20px;
+			width: 6.3rem;
+			height: 6.3rem;
+			--contact-github-color: #007A00;
+			--contact-linkedin-color: #0A66C2;
+			--contact-mail-color: #7832FF;
+			/* d3d3d3 */
+			/*085818*/
+			/*006815*/
+		}
+	}
+}
+
+.dark {
+	div.contactCard div.linkContainer {
+		a.icon-link:hover {
+			--contact-github-color: white;
+			--contact-linkedin-color: white;
+			--contact-mail-color: white;
+		}
+	}
+}
+
+@media(width<720px) {
+	div.contactCard {
+		div.linkContainer {
+			width: 6.2rem;
+			height: 6.2rem;
+		}
+
+		a.icon-link {
+			width: 4.5rem;
+			height: 4.5rem;
+			padding: 18px;
+
+			&:hover,
+			&:active,
+			&:focus {
+				width: 4.5rem;
+				height: 4.5rem;
+				padding: 18px;
+			}
+		}
+	}
+
+}
