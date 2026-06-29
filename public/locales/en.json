@@ -26,6 +26,11 @@
 		"Available for your next big project": "Available for your next big project",
 		"status": "Available",
 		"subtitle": "Senior Frontend Developer",
+		"salesPitch": [
+			"9 years of experience have taught me one thing above all: assumptions are where bugs live.",
+			"Whether it's a landing page or a full SaaS, I check before I ship: the edge case nobody asked about, the contrast ratio that looks fine until you measure it, the logic that only breaks once you feed it real numbers.",
+			"That habit is the actual product. The code is just where it shows up."
+		],
 		"button1": "Let's Talk",
 		"button2": "My Resume",
 		"resumeModalCloseBtn": "Close resume modal",
@@ -39,37 +44,86 @@
 	"projects": {
 		"title": "Recent Projects",
 		"action": "Go to website",
-		"download": "Download",
+		"view": "View code",
 		"expensesApp": {
 			"title": "Expenses App",
-			"subtitle": "Personal Finance Platform",
-			"description": "Started as a personal spreadsheet replacement, now a full-stack production app with Google OAuth, CI/CD pipeline via GitHub Actions, and 84 automated tests. Features budget period tracking, pending expense management, and automated balance calculations, all with WCAG accessibility compliance and zero errors on WAVE and axe audits.",
-			"techStack": {
-				"nextjs": "Next.js",
-				"typescript": "TypeScript",
-				"mongodb": "MongoDB",
-				"tailwind": "Tailwind CSS"
-			}
+			"subtitle": "A spreadsheet replacement that became a daily habit",
+			"description": [
+				"This one started with two real reasons: a spreadsheet was tracking my budget, expenses, and pending bills well enough, but closing out a month still meant an hour spent rebuilding the full picture by hand. At the same time, a legacy-to-modern stack migration was coming at work, and I wanted real uncertainty to practice on, not a tutorial's idea of it. So I built without a roadmap, on purpose.",
+				"It worked; however, a delete action that should have recalculated everything downstream quietly broke. By then, it had already served one of its purposes: being the project that brought real uncertainty to practice. So for a while it just sat there, idle.",
+				"I rebuilt it once, fast, just to have something working, better looking, same logic underneath, mostly untouched.",
+				"The real rebuild came later, out of curiosity more than need. I'm always trying to keep up with newer tools, and once I started studying TanStack Query and React Hook Form, this was the project I kept thinking could use them. The state manager wasn't doing it any favors anymore.",
+				"That meant going back into what had been the core since day one, including that same delete logic that broke the first time. This time I wrote 84 tests before I trusted the fix, fed it real numbers until it held, and watched it hold. It's the version running today, used daily, mobile-friendly enough to check from my phone, and these days, not just by me."
+			],
+			"factLine": "WCAG AA compliant · zero WAVE/axe errors · CI/CD via GitHub Actions"
 		},
 		"frostFind": {
-			"title": "Frost Find | React Native · TypeScript · Firebase",
-			"subtitle": "Real-time ice cream truck tracker",
-			"description": "Built with React Native and Firebase. Features role-based authentication, live location sharing for drivers, interactive maps for customers, distance/ETA calculations, and a rewards system. Demonstrates modern mobile architecture with custom hooks, TypeScript throughout, and production-ready error handling."
+			"title": "Frost Find",
+			"subtitle": "A first mobile app, built fast and finished regardless",
+			"description": [
+				"I'd never built a mobile app when this one landed: a real-time tracker for an ice cream truck business.",
+				"I had no mobile experience, but enough years in React to believe the jump to React Native was learnable, not impossible.",
+				"So I started where you start: the official guide, then the documentation, until I understood what actually changes between web and native before writing real code.",
+				"With no real product photography to work with, I built the visual identity around illustration instead: playful palette, custom art, something that could carry the brand without needing a single stock photo.",
+				"The business's proposal was never approved.",
+				"I finished the MVP anyway (role-based auth, live location sharing, real-time maps) because by then finishing it mattered more than who'd signed off on it."
+			]
 		}
 	},
 	"experience": {
 		"title": "Experience",
-		"banner1": {
-			"title": "From AngularJS to Modern React",
-			"description": "My frontend journey began with AngularJS 1.6, building dynamic applications when the framework was at its peak. As the industry shifted toward React and modern JavaScript, I recognized the need to evolve. I proactively learned React through tutorials and earned certification to validate my skills when my company needed Next.js expertise. This transition wasn't just about learning new syntax, it meant embracing modern development practices, TypeScript for better code reliability, and understanding how to build scalable applications with contemporary tools. The shift from AngularJS's opinionated structure to React's flexibility required rethinking how I approached component architecture and state management."
+		"beat1": {
+			"chapter": "Chapter 1 · First job",
+			"title": "How a friend got me in the door",
+			"description": [
+				"A friend who already worked there knew my background, not my stack, and mentioned an opening might open up.",
+				"I spent a few weeks studying JavaScript and CSS just to understand what his team was actually building and got hooked on what was possible with just JavaScript alone, even if my view of it was still narrow.",
+				"When he told me I'd help him finish the project once I was in, that sealed it.",
+				"The interview confirmed it: meeting the team, seeing not just what they'd built but where they wanted to go, made me want to learn AngularJS fast enough to build alongside them.",
+				"I started full-stack training almost immediately.",
+				"Before I knew it, I'd built the coupon and discount system end to end."
+			]
 		},
-		"banner2": {
-			"title": "Building Complex Business Features",
-			"description": "Beyond simple UI components, I've developed sophisticated systems that solve real business challenges. At my previous company, I built a comprehensive discount and coupon system that handled multiple validation rules, expiration logic, and usage tracking. I created payment link modules that integrated with various providers while maintaining security standards. One of my most challenging projects was architecting a product variation system where child products could have independent pricing, images, and attributes while remaining connected to their parent product. These weren't just coding exercises, they required understanding business logic, data relationships, and user workflows to create systems that actually worked in production environments."
+		"beat2": {
+			"chapter": "Chapter 2 · Trust",
+			"title": "Becoming the one new hires got sent to",
+			"description": [
+				"I don't know exactly why I became the one new hires got sent to, maybe it was trust, since I was already shipping features end to end by then.",
+				"Maybe it was simpler than that: I'd been there longest, I knew the system inside out, and someone needed to onboard the first new dev.",
+				"Whatever the reason, I did it well enough that it stopped being a one-time favor and became my job.",
+				"Every new hire after that came to me not just to learn the codebase, but to learn how to ask questions instead of assuming."
+			]
 		},
-		"banner3": {
-			"title": "Self-Taught Quality Assurance",
-			"description": "Working without formal testing tools taught me to be my own quality assurance engineer. I developed rigorous habits of manually testing edge cases, validating user flows, and catching potential bugs before they reached production. This wasn't just about finding obvious errors, it meant thinking like users who might interact with features in unexpected ways, considering data edge cases, and anticipating integration issues between different system components. Now I'm integrating modern testing frameworks like Jest and React Testing Library into my workflow, combining that hard-earned attention to detail with automated testing practices. This evolution from manual quality assurance to structured testing approaches gives me a comprehensive understanding of how to build reliable applications. I write code with future maintainability in mind, document complex logic thoroughly, and structure applications to minimize errors while ensuring they can be properly tested and validated."
+		"beat3": {
+			"chapter": "Chapter 3 · The pivot",
+			"title": "Migrating under pressure",
+			"description": [
+				"Six years in, the product hit its ceiling, a legacy stack with nowhere left to grow, every client wanting something custom, costs that stopped making sense.",
+				"When the company merged with a larger platform, I didn't see it as an exit, I saw one more problem worth solving.",
+				"I led the migration myself, learning React and Next.js in real time, and shipped things like schema-level SEO, the bigger platform hadn't even gotten to.",
+				"The name changed, the scope changed, the product evolved and so did I."
+			],
+			"tag": "Migration"
+		},
+		"beat4": {
+			"chapter": "Chapter 4 · What it's really about",
+			"title": "If I can't explain it to my grandma...",
+			"description": [
+				"Somewhere along the way, I ended up doing more backend than frontend.",
+				"It paid off, I understood systems end to end, but I missed it.",
+				"Backend logic can be solid and invisible, the proof is in the absence of bugs.",
+				"Frontend is where I can point at something and say \"I built that.\"",
+				"If I can't explain what I'm working on to my grandma, I don't feel the satisfaction.",
+				"So when the chance came to go back to it, fully, I took it."
+			]
+		},
+		"beat5": {
+			"chapter": "Chapter 5 · Now",
+			"title": "Senior, full-stack capable, available",
+			"description": [
+				"All of that; the migration, the mentorship, the years of choosing frontend over everything else, shaped how I build now: modern stack, accessibility-first, shipping tested production code.",
+				"Now I'm available, looking for the next problem worth solving."
+			]
 		}
 	},
 	"contact": {

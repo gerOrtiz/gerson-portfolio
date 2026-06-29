@@ -58,8 +58,8 @@ h4 {
 }
 
 p {
-	line-height: 1.7;
-	font-size: clamp(.9rem, 1.5vw, 1rem);
+	line-height: 1.6;
+	font-size: clamp(.94rem, 1.5vw, 1.03rem);
 }
 
 span {

@@ -97,7 +97,7 @@ export default function ProjectCarousel({ images }: ProjectCarouselProps) {
 				>
 					<Image
 						src={images[index]}
-						alt={images[index].name}
+						alt={images[index].name + ' main'}
 						height={500}
 						className="object-contain rounded-2xl border border-white"
 					/>

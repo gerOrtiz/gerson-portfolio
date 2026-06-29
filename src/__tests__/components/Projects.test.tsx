@@ -30,7 +30,7 @@ describe('Projects', () => {
 		it('displays proper alt text for main image inside slider', () => {
 			const imageDiv = screen.getAllByTestId('carousel-main-image');
 			const image = within(imageDiv[0]).getByRole('img');
-			expect(image).toHaveAttribute('alt', 'expenses app landing page');
+			expect(image).toHaveAttribute('alt', 'expenses app landing page main');
 		});
 
 		it('shows at least 5 thumnail images', () => {
@@ -73,7 +73,7 @@ describe('Projects', () => {
 		it('displays proper alt text for main image inside slider', () => {
 			const imageDiv = screen.getAllByTestId('carousel-main-image');
 			const image = within(imageDiv[1]).getByRole('img');
-			expect(image).toHaveAttribute('alt', 'frost find onboarding');
+			expect(image).toHaveAttribute('alt', 'frost find onboarding main');
 		});
 		it('shows at least 5 thumnail images', () => {
 			const frostFindDiv = screen.getByTestId('frost-find');
@@ -100,8 +100,8 @@ describe('Projects', () => {
 
 		it('renders correct navigation link', () => {
 			const frostFindDiv = screen.getByTestId('frost-find');
-			const link = within(frostFindDiv).getByRole('link', { name: /download/i });
-			expect(link).toHaveAttribute('href', 'https://expo.dev/accounts/gerortiz/projects/frost-find/builds/0360ce7f-954b-4aa1-8f68-6598128a5c86');
+			const link = within(frostFindDiv).getByRole('link', { name: /view code/i });
+			expect(link).toHaveAttribute('href', 'https://github.com/gerOrtiz/my-map-app');
 		});
 	});
 

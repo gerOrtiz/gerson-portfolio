@@ -32,7 +32,7 @@ const BeatCard = ({ beat, side }: { beat: beat, side: 'left' | 'right' }) => {
 			data-testid="beat"
 			className={`${styles.beatCard} ${side === 'left' ? styles.crookedLeft : styles.crookedRight} flex-shrink-0 w-5/6 lg:w-[45%]`}>
 			<div className="w-full flex flex-col gap-4 p-3">
-				<span >{beat.chapter}</span>
+				<span className="chapter">{beat.chapter}</span>
 				<h3 className={styles.title}>{beat.title}</h3>
 				<p>{beat.description}</p>
 				<div className="w-full flex gap-3">

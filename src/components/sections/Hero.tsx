@@ -72,9 +72,7 @@ export default function Hero() {
 							{/* Sales pitch */}
 							<div className="w-full rounded-lg p-0 lg:p-5">
 								<p className="text-xl lg:text-2xl font-medium textShadow italic">
-									{`"9 years of frontend experience taught me one thing above all: the best solution is the one that actually fits the problem. 
-						Whether you need a landing page, a dashboard, a performance audit, or a full SaaS,
-						I bring the same approach: clean, pragmatic code that solves the real problem without unnecessary complexity"`}
+									{`"${(t.raw('salesPitch') as string[]).join(' ')}"`}
 								</p>
 							</div>
 							{/* CTA */}

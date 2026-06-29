@@ -25,7 +25,12 @@
 		"Transforming ideas into interactive realities": "Transformando ideas en realidades interactivas",
 		"Available for your next big project": "Disponible para tu próximo gran proyecto",
 		"status": "Disponible",
-		"subtitle": "Desarrollador Frontend Senior",
+		"subtitle": "Desarrollador Frontend Sénior",
+		"salesPitch": [
+			"9 años de experiencia me han enseñado una cosa por encima de todo: las suposiciones son donde viven los errores.",
+			"Ya sea una landing page o un SaaS completo, verifico antes de lanzar a producción: ese escenario que nadie imaginó, la relación de contraste que parece correcta hasta que la mides, la lógica que solo falla cuando le introduces números reales.",
+			"Ese hábito es el verdadero producto. El código es simplemente donde se manifiesta."
+		],
 		"button1": "Hablemos",
 		"button2": "Mi CV",
 		"resumeModalCloseBtn": "Cierra dialogo",
@@ -39,37 +44,87 @@
 	"projects": {
 		"title": "Proyectos Recientes",
 		"action": "Ir al sitio",
-		"download": "Descargar",
+		"view": "Ver código",
 		"expensesApp": {
 			"title": "Expenses App",
-			"subtitle": "Plataforma de finanzas personales",
-			"description": "Comenzó como un reemplazo personal para una hoja de cálculo, ahora es una applicación full-stack en producción con Google OAuth, un pipeline CI/CD via GitHub Actions, y 84 pruebas automáticas. Ofrece seguimiento de presupuesto por período, administrador de gastos pendientes, y calculos automatizados de saldo, todo con cumplimiento de accesibilidad WCAG y cero errores en auditorías de WAVE y axe.",
-			"techStack": {
-				"nextjs": "Next.js",
-				"typescript": "TypeScript",
-				"mongodb": "MongoDB",
-				"tailwind": "Tailwind CSS"
-			}
+			"subtitle": "Una alternativa a las hojas de cálculo que se convirtió en un hábito diario.",
+			"description": [
+				"Esto comenzó por dos razones reales: una hoja de cálculo llevaba el control de mis finanzas, mis gastos y mis pagos pendientes relativamente bien, pero cerrar un mes implicaba pasar una hora reconstruyendo el panorama completo a mano. Al mismo tiempo, en el trabajo se acercaba una migración de un stack obsoleto a uno moderno, y quería practicar con incertidumbre real, no con la versión de un tutorial. Así que lo construí sin un plan de trabajo, a propósito.",
+				"Funcionó; sin embargo, una acción de eliminar que debía recalcular todo lo que dependía de ella se rompió silenciosamente. Para ese entonces, ya había cumplido uno de sus propósitos: ser el proyecto que trajo incertidumbre real para practicar. Así que, por un tiempo, simplemente quedó ahí, inactivo.",
+				"Lo reconstruí una vez, rápido, solo para tener algo funcionando: con mejor aspecto, pero con la misma lógica por debajo, casi intacta.",
+				"La verdadera reconstrucción llegó después, más por curiosidad que por necesidad. Siempre intento mantenerme al día con herramientas nuevas, y en cuanto empecé a estudiar TanStack Query y React Hook Form, este fue el proyecto que pensé podía aprovecharlas. El manejador de estado que tenía ya no le hacía ningún favor.",
+				"Eso significó volver a lo que había sido el núcleo desde el día uno, incluyendo esa misma lógica de eliminación que falló la primera vez. Esta vez escribí 84 pruebas antes de confiar en la solución completa, la alimenté con números reales hasta que resistió, y la vi resistir. Es la versión que funciona hoy: la uso a diario, es lo bastante amigable con el móvil para revisarla desde el teléfono, y, estos días, no solo yo la uso."
+			],
+			"factLine": "Cumple WCAG AA · cero errores en WAVE/axe · CI/CD con GitHub Actions"
 		},
 		"frostFind": {
 			"title": "Frost Find",
-			"subtitle": "Rastreador en tiempo real de camiones de helado",
-			"description": "Creado con React Native y Firebase. Incluye autenticaciín basada en roles, ubicación en tiempo real para conductores, mapas interactivos para clientes, cálculo de distancia y tiempo estimado de llegada, y un sistema de recompensas (aún en desarrollo). Muestra una arquitectura móvil moderna con custom hooks, TypeScript en toda la aplicación y un sistema de gestión de errores listo para producción."
+			"subtitle": "Una primera aplicación móvil, desarrollada rápidamente y terminada a pesar de las circunstancias",
+			"description": [
+				"Nunca había construido una aplicación móvil cuando llegó esta: un rastreador en tiempo real para un negocio de camiones de helados.",
+				"No tenía experiencia en desarrollo móvil, pero sí suficientes años en React para creer que el salto a React Native era algo que se podía aprender, no algo imposible de lograr.",
+				"Así que empecé por donde se empieza: el tutorial oficial, luego la documentación, hasta entender qué cambia realmente entre web y nativo antes de escribir código real.",
+				"Sin fotografías reales del producto para trabajar, construí la identidad visual a partir de ilustraciones: una paleta de colores divertida, arte personalizado, algo que pudiera transmitir la marca sin la necesitad una sola foto de stock.",
+				"La propuesta de negocio nunca fue aprobada.",
+				"Terminé el MVP de todas formas (autenticación basada en roles, ubicación en tiempo real, mapas en tiempo real) porque, para ese entonces, terminarlo importaba más que quién lo hubiera aprobado."
+			]
 		}
 	},
 	"experience": {
 		"title": "Experiencia",
-		"banner1": {
-			"title": "De AngularJS a React Moderno",
-			"description": "Mi trayectoria frontend comenzó con AngularJS 1.6, construyendo aplicaciones dinámicas cuando el framework estaba en su apogeo. Cuando la industria se desplazó hacia React y JavaScript moderno, reconocí la necesidad de evolucionar. Aprendí React de manera proactiva a través de tutoriales y obtuve certificación para validar mis habilidades cuando mi empresa necesitó experiencia en Next.js. Esta transición no se trataba solo de aprender nueva sintaxis, sino de adoptar prácticas de desarrollo modernas, TypeScript para mayor confiabilidad del código, y entender cómo construir aplicaciones escalables con herramientas contemporáneas. El cambio de la estructura poco flexible de AngularJS a la flexibilidad de React requirió repensar mi enfoque hacia la arquitectura de componentes y el manejo de estados."
+		"beat1": {
+			"chapter": "Capítulo 1 · Primer trabajo",
+			"title": "Cómo un amigo me mostró el camino",
+			"description": [
+				"Un amigo que ya trabajaba allí conocía mi trayectoria, aunque no mi stack tecnológico, y mencionó que podría surgir una vacante.",
+				"Pasé unas semanas estudiando JavaScript y CSS simplemente para entender qué estaba construyendo realmente el equipo,",
+				"y me quedé fascinado con lo que se podía lograr solo con JavaScript, aunque mi perspectiva al respecto era todavía limitada.",
+				"Cuando me dijo que le ayudaría a terminar el proyecto una vez que estuviera dentro, eso fue lo que decidió todo.",
+				"La entrevista lo confirmó: conocer al equipo y ver no solo lo que habían construido, sino también hacia dónde querían ir, hizo que quisiera aprender AngularJS lo suficientemente rápido como para desarrollar junto a ellos.",
+				"Empecé la formación full-stack casi de inmediato.",
+				"Sin darme cuenta, había desarrollado el sistema de cupones y descuentos de principio a fin."
+			]
 		},
-		"banner2": {
-			"title": "Construyendo Características Complejas de Negocio",
-			"description": "Más allá de componentes simples de UI, he desarrollado sistemas sofisticados que resuelven desafíos reales de negocio. En mi empresa anterior, construí un sistema integral de descuentos y cupones que manejaba múltiples reglas de validación, lógica de expiración y seguimiento de uso. Creé módulos de enlaces de pago que se integraban con varios proveedores mientras mantenían estándares de seguridad. Uno de mis proyectos más desafiantes fue construir un sistema de variaciones de productos donde los productos hijo podían tener precios, imágenes y atributos independientes mientras permanecían conectados a su producto padre. Estos no eran solo ejercicios de programación, requirieron entender lógica de negocio, relaciones de datos y flujos de usuario para crear sistemas que realmente funcionaran en entornos de producción."
+		"beat2": {
+			"chapter": "Capítulo 2 · Confianza",
+			"title": "Convirtiéndome en la persona a la que enviaban a los nuevos desarrolladores",
+			"description": [
+				"No sé exactamente por qué me asignaban a los nuevos desarrolladores; tal vez fuera cuestión de confianza, ya que por aquel entonces yo ya me encargaba de desarrollar funcionalidades de principio a fin.",
+				"Quizás fuera más sencillo que eso: yo llevaba más tiempo allí, conocía el sistema a la perfección y alguien tenía que integrar al primer nuevo desarrollador.",
+				"Sea cual sea el motivo, lo hice lo suficientemente bien como para que dejara de ser un favor puntual y se convirtiera en mi trabajo.",
+				"Todos los nuevos empleados que llegaron después acudían a mí no solo para aprender el código, sino para aprender a hacer preguntas en lugar de hacer suposiciones."
+			]
 		},
-		"banner3": {
-			"title": "Aseguramiento de Calidad Autodidacta",
-			"description": "Trabajar sin herramientas formales de testing me enseñó a ser mi propio ingeniero de aseguramiento de calidad. Desarrollé hábitos rigurosos de probar manualmente casos extremos, validar flujos de usuario y detectar errores potenciales antes de que llegaran a producción. Esto no se trataba solo de encontrar errores obvios, significaba pensar como usuarios que podrían interactuar con características de maneras inesperadas, considerar casos extremos de datos y anticipar problemas de integración entre diferentes componentes del sistema. Ahora estoy integrando frameworks de testing modernos como Jest y React Testing Library en mi flujo de trabajo, combinando esa atención al detalle ganada con esfuerzo con prácticas de testing automatizado. Esta evolución del aseguramiento de calidad manual a enfoques de testing estructurados me da un entendimiento integral de cómo construir aplicaciones confiables. Escribo código pensando en la mantenibilidad futura, hago pruebas de lógica compleja minuciosamente y estructuro aplicaciones para minimizar errores mientras aseguro que puedan ser probadas y validadas apropiadamente."
+		"beat3": {
+			"chapter": "Capítulo 3 · La adaptación",
+			"title": "Migrando bajo presión",
+			"description": [
+				"Tras seis años, el producto llegó a su techo, un stack obsoleto sin espacio para crecer, clientes que exigían soluciones a medida y unos costes que dejaron de tener sentido.",
+				"Cuando la empresa se fusionó con una plataforma más grande, no lo vi como una salida; vi un problema más que valía la pena resolver.",
+				"Lideré la migración personalmente, aprendiendo React y Next.js sobre la marcha, e implementé funcionalidades como el SEO a nivel de esquema, que la plataforma principal ni siquiera había llegado a desarrollar.",
+				"El nombre cambió, el alcance cambió, el producto evolucionó y yo también."
+			],
+			"tag": "Migración"
+		},
+		"beat4": {
+			"chapter": "Capítulo 4 · De qué trata realmente",
+			"title": "Si no puedo explicárselo a mi abuela...",
+			"description": [
+				"En algún momento del camino, terminé dedicándome más al backend que al frontend.",
+				"Valió la pena; entendía los sistemas de principio a fin, pero extrañaba el frontend.",
+				"La lógica del backend puede ser sólida e invisible; la prueba está en la ausencia de errores.",
+				"El frontend es donde puedo señalar algo y decir: \"Eso lo construí yo\".",
+				"Si no puedo explicarle a mi abuela en qué estoy trabajando, no siento satisfacción.",
+				"Así que, cuando surgió la oportunidad de volver a aquello por completo, la aproveché."
+			]
+		},
+		"beat5": {
+			"chapter": "Capítulo 5 · Ahora",
+			"title": "Perfil sénior, con capacidad full-stack y disponibilidad.",
+			"description": [
+				"Todo eso; la migración, la tutoría, los años priorizando el frontend sobre cualquier otra cosa, moldearon mi forma actual de desarrollar: un stack moderno, un enfoque que prioriza la accesibilidad y la entrega de código probado listo para producción.",
+				"Ahora estoy disponible, buscando el próximo problema que valga la pena resolver."
+			]
 		}
 	},
 	"contact": {

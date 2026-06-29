@@ -50,7 +50,8 @@ div.contactCard {
 		transition: padding 0.4s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
 
 
-		&:hover {
+		&:hover,
+		&:focus-visible {
 			background-color: var(--contact-link-hover);
 			padding: 20px;
 			width: 6.3rem;
@@ -89,7 +90,7 @@ div.contactCard {
 
 			&:hover,
 			&:active,
-			&:focus {
+			&:focus-visible {
 				width: 4.5rem;
 				height: 4.5rem;
 				padding: 18px;

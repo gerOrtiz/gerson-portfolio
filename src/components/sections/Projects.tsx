@@ -52,8 +52,9 @@ const frostScreenshots = [{ ...onboarding, name: 'frost find onboarding' }, { ..
 
 export default function Projects() {
 	const t = useTranslations('projects');
+
 	return (
-		<section id="projects" className="px-0 flex flex-col gap-5 pb-20 lg:pb-10">
+		<section id="projects" className="px-0 flex flex-col gap-5 pb-20 lg:pb-14">
 			<SectionDivider title={t('title')} />
 			{/* Expenses App */}
 			<div data-testid="expenses-app" className="w-full flex flex-col lg:flex-row px-4 lg:px-6 gap-20 lg:gap-3 items-center mb-3">
@@ -67,12 +68,23 @@ export default function Projects() {
 							<h4>{t('expensesApp.subtitle')}</h4>
 						</div>
 						<div className="mt-2">
-							<p >{t('expensesApp.description')}</p>
+							{/* <p >{t('expensesApp.description')}</p> */}
+							{/* <p>{t.raw('expensesApp.description') as string[].join(' ')}</p> */}
+
+							{(t.raw('expensesApp.description') as string[]).map((t, index) => (
+								<p key={index} className="mb-1">{t}</p>
+							))}
+							<div className="text-left my-2">
+								<span className="factLine text-xs lg:text-sm">{t('expensesApp.factLine')}</span>
+							</div>
 							<div className="w-full my-8">
 								<TechMarquee logos={expensesLogos} direction="left" />
 							</div>
 							<div className="flex justify-center items-center lg:mt-2 lg:justify-end">
-								<a className="btn-base btn-primary btn-link items-center group" href="https://expenses-app-2.vercel.app" target="_blank">
+								<a className="btn-base btn-primary btn-link items-center group"
+									href="https://expenses-app-2.vercel.app"
+									rel="noopener noreferrer"
+									target="_blank">
 									{t('action')}
 									<MoveRight className="mt-0.5 w-4 h-4 transition-transform delay-75 group-hover:translate-x-1" />
 								</a>
@@ -90,13 +102,17 @@ export default function Projects() {
 							<h4>{t('frostFind.subtitle')}</h4>
 						</div>
 						<div className="mt-2">
-							<p >{t('frostFind.description')}</p>
+							{/* <p >{t('frostFind.description')}</p> */}
+							<p>{(t.raw('frostFind.description') as string[]).join(' ')}</p>
 							<div className="flex justify-self-center w-full lg:w-4/5 my-8">
 								<TechMarquee logos={frostLogos} direction="right" />
 							</div>
 							<div className="flex justify-center items-center lg:mt-2 lg:justify-end">
-								<a className="btn-base btn-primary btn-link items-center group" href="https://expo.dev/accounts/gerortiz/projects/frost-find/builds/0360ce7f-954b-4aa1-8f68-6598128a5c86" target="_blank">
-									{t('download')}
+								<a className="btn-base btn-primary btn-link items-center group"
+									href="https://github.com/gerOrtiz/my-map-app"
+									target="_blank"
+									rel="noopener noreferrer">
+									{t('view')}
 									<MoveRight className="mt-0.5 w-4 h-4 transition-transform delay-75 group-hover:translate-x-1" />
 								</a>
 							</div>
