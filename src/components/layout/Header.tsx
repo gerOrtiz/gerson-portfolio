@@ -10,6 +10,7 @@ import LanguageToggle from '../ui/LanguageToggle';
 export default function Header() {
 	const t = useTranslations('header');
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
 	const ref = useRef<HTMLDivElement | null>(null);
 
 	const handleClickOutside = useCallback((event: MouseEvent) => {
@@ -23,9 +24,17 @@ export default function Header() {
 		return () => document.removeEventListener('mousedown', handleClickOutside);
 	}, [isMenuOpen, handleClickOutside]);
 
+	useEffect(() => {
+		const handleScroll = () => {
+			setScrolled(window.scrollY > 20);
+		};
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
+
 	return (
-		<header className="main-header sticky top-0 w-full z-50">
-			<nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<header className="main-header  z-50">
+			<nav className={`nav-bar ${scrolled ? 'scrolled' : ''}  mx-auto px-4 sm:px-6 lg:px-8`}>
 				<div className="flex justify-between items-center h-16">
 					{/* Mobile menu button */}
 					<div ref={ref} className="md:hidden flex flex-col items-center mt-0.5">
@@ -38,7 +47,7 @@ export default function Header() {
 					</div>
 					{/* Logo */}
 					<div className="flex-shrink-0 ml-3 lg:ml-0">
-						<h1 className="text-2xl font-bold">Gerson Ortiz</h1>
+						<h1 className="text-3xl font-bold">Gerson Ortiz</h1>
 					</div>
 
 					{/* Mobile theme button */}

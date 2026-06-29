@@ -14,7 +14,6 @@
 	--border: #e2e8f0;
 	--input: #ffffff;
 
-
 	/* Accent Colors */
 	--accent: #1f1d4e;
 	--accent-foreground: #ffffff;
@@ -79,15 +78,29 @@
 	/* Link Colors */
 	--link: #d3d8f5;
 	--link-hover: #98befc;
-	--link-visited: #a78bfa;
+	--link-visited: #597094;
 
 	/* Shadow Colors - Adjusted for dark */
 	--shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.1), 0 1px 2px -1px rgba(255, 255, 255, 0.1);
 	--shadow-lg: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -4px rgba(255, 255, 255, 0.1);
 }
 
+#projects {
+	--divider-bg-start: var(--hero-bg);
+}
+
+#experience {
+	--divider-bg-start: var(--projects-bg);
+}
+
+#contact {
+	--divider-bg-start: var(--experience-bg);
+}
+
 html {
-	background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
 	color: var(--muted-foreground);
-	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section {
+	transition: background-color 400ms ease, color 300ms ease;
 }

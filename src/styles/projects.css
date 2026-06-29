@@ -1,0 +1,24 @@
+:root {
+  --projects-bg: #e0e7ff;
+  /* Marquee */
+  --pill-bg: rgba(255, 255, 255, 0.08);
+  --mask: white;
+  --fact-list-color: #3d3b70;
+  --t: #1f1d4e;
+}
+
+.dark {
+  --projects-bg: #1e1b4b;
+  /* Marquee */
+  --pill-bg: rgba(255, 255, 255, 0.08);
+  --mask: black;
+  --fact-list-color: #97abc7;
+}
+
+section#projects {
+  background-color: var(--projects-bg);
+
+  span.factLine {
+    color: var(--fact-list-color);
+  }
+}
