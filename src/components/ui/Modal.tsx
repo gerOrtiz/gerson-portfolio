@@ -64,16 +64,16 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
 						<div className="w-full lg:w-2/5 flex flex-col items-center gap-4">
 							<PdfIcon size={100} />
 							<span>{t('resume1')}</span>
-							<a href="/Gerson_Ortiz_Resume.pdf" download>
-								{t('download')}
+							<a href="/Gerson_Ortiz_Resume.pdf" target="_blank">
+								{t('view')}
 							</a>
 						</div>
 						<hr className="h-0 lg:h-auto w-auto lg:w-[1px] bg-sky-500" />
 						<div className="w-full lg:w-2/5 flex flex-col items-center gap-4">
 							<PdfIcon size={100} />
 							<span>{t('resume2')}</span>
-							<a href="/Gerson_Ortiz.pdf" download>
-								{t('download')}
+							<a href="/Gerson_Ortiz.pdf" target="_blank">
+								{t('view')}
 							</a>
 						</div>
 

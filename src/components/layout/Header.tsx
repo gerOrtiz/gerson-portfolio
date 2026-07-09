@@ -5,13 +5,19 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import ThemeToggleButton from '../ui/ThemeToggleButton';
 import { useTranslations } from 'next-intl';
 import LanguageToggle from '../ui/LanguageToggle';
+import Modal from '../ui/Modal';
 
 
 export default function Header() {
 	const t = useTranslations('header');
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
+	const [openModal, setOpenModal] = useState(false);
 	const ref = useRef<HTMLDivElement | null>(null);
+
+	const onCloseModal = useCallback(() => {
+		setOpenModal(false);
+	}, []);
 
 	const handleClickOutside = useCallback((event: MouseEvent) => {
 		if (ref.current && !ref.current.contains(event.target as Node)) {
@@ -37,7 +43,7 @@ export default function Header() {
 			<nav className={`nav-bar ${scrolled ? 'scrolled' : ''}  mx-auto px-4 sm:px-6 lg:px-8`}>
 				<div className="flex justify-between items-center h-16">
 					{/* Mobile menu button */}
-					<div ref={ref} className="md:hidden flex flex-col items-center mt-0.5">
+					<div className="md:hidden flex flex-col items-center mt-0.5">
 						<button onClick={() => setIsMenuOpen(!isMenuOpen)}>
 							<span className="sr-only">{t('main-menu')}</span>
 							<svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -60,6 +66,7 @@ export default function Header() {
 						<Link href="#projects">{t('projects')}</Link>
 						<Link href="#experience">{t('experience')}</Link>
 						<Link href="#contact">{t('contact')}</Link>
+						<button className="link" onClick={() => setOpenModal(true)}>{t('resume')}</button>
 						{/* Theme toggle placeholder */}
 						<div className="w-full flex justify-center items-center gap-2 ">
 							<LanguageToggle />
@@ -72,11 +79,12 @@ export default function Header() {
 
 				{/* Mobile menu */}
 				{isMenuOpen && (
-					<div data-testid="mobile-menu" className="md:hidden border-t border-gray-200 pb-4 z-10">
+					<div ref={ref} data-testid="mobile-menu" className="md:hidden border-t border-gray-200 pb-4 z-10">
 						<div className="px-2 pt-2 space-y-1">
-							<Link href="#projects" className="block px-3 py-2">{t('projects')}</Link>
-							<Link href="#experience" className="block px-3 py-2">{t('experience')}</Link>
-							<Link href="#contact" className="block px-3 py-2">{t('contact')}</Link>
+							<Link href="#projects" className="block px-3 py-2" onClick={() => setIsMenuOpen(false)}>{t('projects')}</Link>
+							<Link href="#experience" className="block px-3 py-2" onClick={() => setIsMenuOpen(false)}>{t('experience')}</Link>
+							<Link href="#contact" className="block px-3 py-2" onClick={() => setIsMenuOpen(false)}>{t('contact')}</Link>
+							<button className="link block px-3 py-2" onClick={() => setOpenModal(true)}>{t('resume')}</button>
 						</div>
 						<div className="px-5 pt-2 space-y-1 pb-3">
 							<LanguageToggle />
@@ -85,6 +93,10 @@ export default function Header() {
 					</div>
 				)}
 			</nav>
+			{openModal && (
+				<Modal isOpen={openModal} onClose={onCloseModal} />
+			)}
 		</header>
+
 	);
 }
