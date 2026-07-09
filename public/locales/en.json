@@ -4,6 +4,7 @@
 		"experience": "Experience",
 		"projects": "Projects",
 		"contact": "Contact",
+		"resume": "Resume",
 		"main-menu": "Open main menu"
 	},
 	"footer": {
@@ -38,7 +39,7 @@
 		"resumeModalSubtitle": "Select your preferred language to download",
 		"resume1": "English",
 		"resume2": "Spanish",
-		"download": "Download",
+		"view": "View",
 		"close": "Close"
 	},
 	"projects": {
@@ -128,7 +129,7 @@
 	},
 	"contact": {
 		"title": "Get in touch",
-		"subtitle": "Let's build something worth shipping",
+		"subtitle": "Let's build something.",
 		"anchor1": "Let's connect on LinkedIn",
 		"anchor2": "View code on GitHub",
 		"anchor3": "Email me at contacto.gersonortiz@gmail.com"

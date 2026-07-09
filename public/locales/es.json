@@ -4,6 +4,7 @@
 		"experience": "Experiencia",
 		"projects": "Proyectos",
 		"contact": "Contacto",
+		"resume": "CV",
 		"main-menu": "Abrir menú principal"
 	},
 	"footer": {
@@ -38,7 +39,7 @@
 		"resumeModalSubtitle": "Selecciona el archivo en el idioma de tu preferencia",
 		"resume1": "CV en Inglés",
 		"resume2": "CV en Español",
-		"download": "Descargar",
+		"view": "Ver CV",
 		"close": "Cerrar"
 	},
 	"projects": {
@@ -129,7 +130,7 @@
 	},
 	"contact": {
 		"title": "Ponte en contacto",
-		"subtitle": "Construyamos algo que valga la pena lanzar",
+		"subtitle": "Construyamos algo.",
 		"anchor1": "Conectemos en LinkedIn",
 		"anchor2": "Ver código en GitHub",
 		"anchor3": "Envíame un correo a contacto.gersonortiz@gmail.com"

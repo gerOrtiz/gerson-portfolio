@@ -18,7 +18,13 @@ export default function ThemeToggleButton() {
 	const isDark = useMemo(() => theme === 'dark', [theme]);
 
 	const handleSwitchClick = useCallback(() => {
-		setTheme(isDark ? 'light' : 'dark');
+		// setTheme(isDark ? 'light' : 'dark');
+		const newTheme = isDark ? 'light' : 'dark';
+		if (document.startViewTransition) {
+			document.startViewTransition(() => {
+				setTheme(newTheme);
+			});
+		} else setTheme(newTheme);
 		setSparkClass('sparkle');
 		if (timer.current) clearTimeout(timer.current);
 		timer.current = setTimeout(() => {

@@ -54,9 +54,9 @@ describe('Hero', () => {
 		expect(resumeDialog).toBeInTheDocument();
 		const links = within(resumeDialog).getAllByRole('link');
 		expect(links.length).toBe(2);
-		expect(links[0]).toHaveAttribute('download');
+		expect(links[0]).toHaveAttribute('target', '_blank');
 		expect(links[0]).toHaveAttribute('href', '/Gerson_Ortiz_Resume.pdf');
-		expect(links[1]).toHaveAttribute('download');
+		expect(links[1]).toHaveAttribute('target', '_blank');
 		expect(links[1]).toHaveAttribute('href', '/Gerson_Ortiz.pdf');
 	});
 
